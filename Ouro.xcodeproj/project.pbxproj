@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */; };
-		6AC5E2C022764BD8001210B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BF22764BD8001210B8 /* ViewController.swift */; };
+		6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */; };
 		6AC5E2C322764BD8001210B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C122764BD8001210B8 /* Main.storyboard */; };
 		6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */; };
 		6AC5E2C822764BDA001210B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C722764BDA001210B8 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		6AC5E2BA22764BD8001210B8 /* Ouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ouro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AC5E2BF22764BD8001210B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		6AC5E2C222764BD8001210B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6AC5E2C522764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ouro_iOSApplication_v1.xcdatamodel; sourceTree = "<group>"; };
 		6AC5E2C722764BDA001210B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		6AC5E2D222764BEA001210B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BF22764BD8001210B8 /* ViewController.swift */,
+				6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */,
-				6AC5E2C022764BD8001210B8 /* ViewController.swift in Sources */,
+				6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */,
 				6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W3TCYQL7A;
-				INFOPLIST_FILE = "Ouro iOSApplication v1/Model/Info.plist";
+				INFOPLIST_FILE = Ouro/Model/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W3TCYQL7A;
-				INFOPLIST_FILE = "Ouro iOSApplication v1/Model/Info.plist";
+				INFOPLIST_FILE = Ouro/Model/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
