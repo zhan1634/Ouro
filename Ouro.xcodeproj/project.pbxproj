@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6AC5E2BA22764BD8001210B8 /* Ouro iOSApplication v1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ouro iOSApplication v1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AC5E2BA22764BD8001210B8 /* Ouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ouro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC5E2BF22764BD8001210B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6AC5E2C222764BD8001210B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		6AC5E2B122764BD8001210B8 = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BC22764BD8001210B8 /* Ouro iOSApplication v1 */,
+				6AC5E2BC22764BD8001210B8 /* Ouro */,
 				6AC5E2BB22764BD8001210B8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +48,55 @@
 		6AC5E2BB22764BD8001210B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BA22764BD8001210B8 /* Ouro iOSApplication v1.app */,
+				6AC5E2BA22764BD8001210B8 /* Ouro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6AC5E2BC22764BD8001210B8 /* Ouro iOSApplication v1 */ = {
+		6AC5E2BC22764BD8001210B8 /* Ouro */ = {
 			isa = PBXGroup;
 			children = (
 				6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */,
-				6AC5E2BF22764BD8001210B8 /* ViewController.swift */,
-				6AC5E2C122764BD8001210B8 /* Main.storyboard */,
-				6AC5E2C722764BDA001210B8 /* Assets.xcassets */,
-				6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */,
-				6AC5E2CC22764BDA001210B8 /* Info.plist */,
+				6AC5E2D222764BEA001210B8 /* Controller */,
+				6AC5E2D322764BF7001210B8 /* View */,
+				6AC5E2D422764BFF001210B8 /* Model */,
 				6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */,
 			);
-			path = "Ouro iOSApplication v1";
+			path = Ouro;
+			sourceTree = "<group>";
+		};
+		6AC5E2D222764BEA001210B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6AC5E2BF22764BD8001210B8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6AC5E2D322764BF7001210B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6AC5E2C122764BD8001210B8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6AC5E2D422764BFF001210B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */,
+				6AC5E2CC22764BDA001210B8 /* Info.plist */,
+				6AC5E2C722764BDA001210B8 /* Assets.xcassets */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AC5E2B922764BD8001210B8 /* Ouro iOSApplication v1 */ = {
+		6AC5E2B922764BD8001210B8 /* Ouro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro iOSApplication v1" */;
+			buildConfigurationList = 6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro" */;
 			buildPhases = (
 				6AC5E2B622764BD8001210B8 /* Sources */,
 				6AC5E2B722764BD8001210B8 /* Frameworks */,
@@ -82,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = "Ouro iOSApplication v1";
+			name = Ouro;
 			productName = "Ouro iOSApplication v1";
-			productReference = 6AC5E2BA22764BD8001210B8 /* Ouro iOSApplication v1.app */;
+			productReference = 6AC5E2BA22764BD8001210B8 /* Ouro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro iOSApplication v1" */;
+			buildConfigurationList = 6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +139,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AC5E2B922764BD8001210B8 /* Ouro iOSApplication v1 */,
+				6AC5E2B922764BD8001210B8 /* Ouro */,
 			);
 		};
 /* End PBXProject section */
@@ -288,12 +312,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W3TCYQL7A;
-				INFOPLIST_FILE = "Ouro iOSApplication v1/Info.plist";
+				INFOPLIST_FILE = "Ouro iOSApplication v1/Model/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ourov1.Ouro-iOSApplication-v1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ouro.iOSApplication-v1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,12 +330,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9W3TCYQL7A;
-				INFOPLIST_FILE = "Ouro iOSApplication v1/Info.plist";
+				INFOPLIST_FILE = "Ouro iOSApplication v1/Model/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Ourov1.Ouro-iOSApplication-v1";
+				PRODUCT_BUNDLE_IDENTIFIER = "Ouro.iOSApplication-v1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro iOSApplication v1" */ = {
+		6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AC5E2CD22764BDA001210B8 /* Debug */,
@@ -330,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro iOSApplication v1" */ = {
+		6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AC5E2D022764BDA001210B8 /* Debug */,
