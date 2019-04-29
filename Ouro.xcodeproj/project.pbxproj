@@ -13,6 +13,9 @@
 		6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */; };
 		6AC5E2C822764BDA001210B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C722764BDA001210B8 /* Assets.xcassets */; };
 		6AC5E2CB22764BDA001210B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */; };
+		6AD8A3D622766C6800947D14 /* popUpGroupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */; };
+		6AD8A3DA227676DF00947D14 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */; };
+		6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		6AC5E2C722764BDA001210B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6AC5E2CA22764BDA001210B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AC5E2CC22764BDA001210B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpGroupSelection.swift; sourceTree = "<group>"; };
+		6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */,
+				6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */,
+				6AD8A3DB2276772500947D14 /* FriendsSelection */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -89,6 +97,15 @@
 				6AC5E2C722764BDA001210B8 /* Assets.xcassets */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6AD8A3DB2276772500947D14 /* FriendsSelection */ = {
+			isa = PBXGroup;
+			children = (
+				6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */,
+				6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */,
+			);
+			path = FriendsSelection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */,
 				6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */,
 				6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */,
 				6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */,
+				6AD8A3DA227676DF00947D14 /* FriendsCollectionViewCell.swift in Sources */,
+				6AD8A3D622766C6800947D14 /* popUpGroupSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import UIKit
 
 class MainScreenController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -19,5 +20,15 @@ class MainScreenController: UIViewController {
     }
 
 
+    // MARK: Solo / Group Popover Presentation
+    @IBAction func logoGroupSelection(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ouroSelectionGroup") as! popUpGroupSelection
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
+        
+    }
+    
 }
 
