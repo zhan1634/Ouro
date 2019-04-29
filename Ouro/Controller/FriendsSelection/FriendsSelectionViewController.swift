@@ -25,7 +25,6 @@ class FriendsSelectionViewController: UIViewController, UICollectionViewDataSour
     }
     
     
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendsIconCell", for: indexPath) as! FriendsCollectionViewCell
         cell.FriendsCell.text = items[indexPath.item]

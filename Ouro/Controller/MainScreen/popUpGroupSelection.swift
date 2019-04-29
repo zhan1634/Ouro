@@ -16,6 +16,8 @@ class popUpGroupSelection: UIViewController {
         self.showAnimate()
 
     }
+    
+    // MARK: Animation for Solo Group Selections
     @IBAction func closeGroupSelection(_ sender: Any) {
         self.removeAnimate()
     }
@@ -38,4 +40,21 @@ class popUpGroupSelection: UIViewController {
             }
         })
     }
+    
+    // MARK: Group Selection
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if (segue.identifier == "GroupSegue") {
+//            // pass data to next view
+//        }
+//    }
+    
+    @IBAction func GroupButton(_ sender: Any) {
+        performSegue(withIdentifier: "GroupSegue", sender: self)
+    }
+    
+    @IBAction func SoloButton(_ sender: Any) {
+        performSegue(withIdentifier: "SoloPreferencesSegue", sender: self)
+    }
+    
+    
 }
