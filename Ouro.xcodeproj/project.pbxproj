@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A30EF8B227E56E900874830 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA9C0F227E53D9001D977F /* GoogleService-Info.plist */; };
+		6A595B97227BB80D004BD03C /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B96227BB80D004BD03C /* GenerateViewController.swift */; };
+		6A595B9A227BB8B8004BD03C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B99227BB8B8004BD03C /* LoginViewController.swift */; };
+		6A595B9C227BB8C7004BD03C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */; };
 		6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */; };
 		6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */; };
 		6AC5E2C322764BD8001210B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C122764BD8001210B8 /* Main.storyboard */; };
@@ -18,9 +22,15 @@
 		6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */; };
 		6AD8A3E42276897E00947D14 /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3E32276897E00947D14 /* ParametersViewController.swift */; };
 		6AD8A3E722768AEB00947D14 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3E622768AEB00947D14 /* PreferencesViewController.swift */; };
+		6AFA9C0D227E53D2001D977F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6AFA9C0C227E53D2001D977F /* GoogleService-Info.plist */; };
+		EDE68495389D2E1F43A3748C /* Pods_Ouro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.debug.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.debug.xcconfig"; sourceTree = "<group>"; };
+		6A595B96227BB80D004BD03C /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
+		6A595B99227BB8B8004BD03C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		6AC5E2BA22764BD8001210B8 /* Ouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ouro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
@@ -34,6 +44,10 @@
 		6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionViewController.swift; sourceTree = "<group>"; };
 		6AD8A3E32276897E00947D14 /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
 		6AD8A3E622768AEB00947D14 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = Ouro/Controller/Parameters/PreferencesViewController.swift; sourceTree = SOURCE_ROOT; };
+		6AFA9C0C227E53D2001D977F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6AFA9C0F227E53D9001D977F /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ouro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.release.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +55,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE68495389D2E1F43A3748C /* Pods_Ouro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A595B98227BB816004BD03C /* Generate */ = {
+			isa = PBXGroup;
+			children = (
+				6A595B96227BB80D004BD03C /* GenerateViewController.swift */,
+			);
+			path = Generate;
+			sourceTree = "<group>";
+		};
+		6A595B9D227BB8D7004BD03C /* Registration & Login */ = {
+			isa = PBXGroup;
+			children = (
+				6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */,
+				6A595B99227BB8B8004BD03C /* LoginViewController.swift */,
+			);
+			path = "Registration & Login";
+			sourceTree = "<group>";
+		};
 		6AC5E2B122764BD8001210B8 = {
 			isa = PBXGroup;
 			children = (
 				6AC5E2BC22764BD8001210B8 /* Ouro */,
 				6AC5E2BB22764BD8001210B8 /* Products */,
+				B42D4C95342368DE9F5B2480 /* Pods */,
+				6AFA9C0E227E53D8001D977F /* Supporting FIles */,
+				96FBCE03554C20A4AA10CE49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,9 +113,11 @@
 		6AC5E2D222764BEA001210B8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6A595B9D227BB8D7004BD03C /* Registration & Login */,
 				6AD8A3E5227689AB00947D14 /* MainScreen */,
 				6AD8A3E22276892C00947D14 /* Parameters */,
 				6AD8A3DB2276772500947D14 /* FriendsSelection */,
+				6A595B98227BB816004BD03C /* Generate */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +167,32 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		6AFA9C0E227E53D8001D977F /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				6AFA9C0F227E53D9001D977F /* GoogleService-Info.plist */,
+			);
+			name = "Supporting FIles";
+			sourceTree = "<group>";
+		};
+		96FBCE03554C20A4AA10CE49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */,
+				6AFA9C0C227E53D2001D977F /* GoogleService-Info.plist */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B42D4C95342368DE9F5B2480 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */,
+				FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro" */;
 			buildPhases = (
+				939C98222DF4A8341FADEF6D /* [CP] Check Pods Manifest.lock */,
 				6AC5E2B622764BD8001210B8 /* Sources */,
 				6AC5E2B722764BD8001210B8 /* Frameworks */,
 				6AC5E2B822764BD8001210B8 /* Resources */,
+				620E2822EDAE8929B1DB7004 /* [CP] Copy Pods Resources */,
+				34E49B0AB2EFDD64CC0C7D19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +255,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AC5E2CB22764BDA001210B8 /* LaunchScreen.storyboard in Resources */,
+				6AFA9C0D227E53D2001D977F /* GoogleService-Info.plist in Resources */,
+				6A30EF8B227E56E900874830 /* GoogleService-Info.plist in Resources */,
 				6AC5E2C822764BDA001210B8 /* Assets.xcassets in Resources */,
 				6AC5E2C322764BD8001210B8 /* Main.storyboard in Resources */,
 			);
@@ -196,18 +264,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34E49B0AB2EFDD64CC0C7D19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		620E2822EDAE8929B1DB7004 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		939C98222DF4A8341FADEF6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Ouro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6AC5E2B622764BD8001210B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */,
+				6A595B97227BB80D004BD03C /* GenerateViewController.swift in Sources */,
 				6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */,
+				6A595B9C227BB8C7004BD03C /* RegistrationViewController.swift in Sources */,
 				6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */,
 				6AD8A3E722768AEB00947D14 /* PreferencesViewController.swift in Sources */,
 				6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */,
 				6AD8A3DA227676DF00947D14 /* FriendsCollectionViewCell.swift in Sources */,
 				6AD8A3E42276897E00947D14 /* ParametersViewController.swift in Sources */,
+				6A595B9A227BB8B8004BD03C /* LoginViewController.swift in Sources */,
 				6AD8A3D622766C6800947D14 /* popUpGroupSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,17 +496,18 @@
 		};
 		6AC5E2D022764BDA001210B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S29V75ZKPL;
+				DEVELOPMENT_TEAM = 9W3TCYQL7A;
 				INFOPLIST_FILE = Ouro/Model/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ouro1.VictoriaTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Ouro.Developmentv1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -371,17 +516,18 @@
 		};
 		6AC5E2D122764BDA001210B8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = S29V75ZKPL;
+				DEVELOPMENT_TEAM = 9W3TCYQL7A;
 				INFOPLIST_FILE = Ouro/Model/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ouro1.VictoriaTest;
+				PRODUCT_BUNDLE_IDENTIFIER = Ouro.Developmentv1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

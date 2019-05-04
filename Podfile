@@ -6,5 +6,9 @@ target 'Ouro' do
   use_frameworks!
 
   # Pods for Ouro
+    pod 'GoogleMaps'
+    pod 'Firebase/Core'
+    pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
+
 
 end
