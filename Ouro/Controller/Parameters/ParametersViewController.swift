@@ -31,9 +31,9 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
     lazy var geocoder = CLGeocoder()
     @IBOutlet weak var SearchBar: UISearchBar!
     var searchString: String = ""
-    @IBOutlet weak var LabelString: UILabel!
     var searchLat = Double()
     var searchLong = Double()
+    var setLocationPreferences = CLLocation()
     
     override func viewDidLoad() {
         
@@ -58,12 +58,11 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
         SearchBar.delegate = self
         SearchBar.isHidden = false
         self.view.addSubview(SearchBar)
-        self.view.addSubview(LabelString)
         
         // Drag initialization for preferences
         let drag = UIPanGestureRecognizer(target: self, action: #selector(ParametersViewController.touch(sender:)))
         view.addGestureRecognizer(drag)
-        popOverVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY * (5/6), width: self.view.frame.width, height: self.view.frame.height)
+        popOverVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY * (7/8), width: self.view.frame.width, height: self.view.frame.height)
         self.view.addSubview(popOverVC.view)
         scrollState = false
 
@@ -82,7 +81,12 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
     
     @IBAction func Generate(_ sender: Any) {
         
-        performSegue(withIdentifier: "GenerateSegue", sender: self)
+        let popGenerateVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GenerateScreen") as! GenerateViewController
+        popGenerateVC.setLocation = self.setLocationPreferences
+        self.addChild(popGenerateVC)
+        popGenerateVC.view.frame = self.view.frame
+        self.view.addSubview(popGenerateVC.view)
+        popGenerateVC.didMove(toParent: self)
         
     }
 
@@ -97,14 +101,15 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
             currentScroll = popOverVC.view.frame.minY
             if scrollState == true && translation.y > 0 {
                 popOverVC.removeFromParent()
+                popOverVC.UpDownLabel = "Up"
             }
             
         } else if sender.state == UIGestureRecognizer.State.changed {
             
             verticalShift = currentScroll + translation.y
             
-            if verticalShift > (self.view.frame.maxY * (5/6)) {
-                verticalShift = self.view.frame.maxY * (5/6)
+            if verticalShift > (self.view.frame.maxY * (7/8)) {
+                verticalShift = self.view.frame.maxY * (7/8)
             } else if verticalShift <= (self.view.frame.minY) {
                 verticalShift = self.view.frame.minY
             }
@@ -118,7 +123,9 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
                     self.popOverVC.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
                 }
                 scrollState = true
+                popOverVC.UpDownLabel = "Down"
                 self.addChild(popOverVC)
+                
             } else if scrollState == true && translation.y > 0 {
                 UIView.animate(withDuration: 0.1) {
                     self.popOverVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY * (5/6), width: self.view.frame.width, height: self.view.frame.height)
@@ -136,11 +143,11 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
         let camera = GMSCameraPosition.camera(withLatitude: location.coordinate.latitude,
                                               longitude: location.coordinate.longitude,
                                               zoom: zoomLevel)
-        
         self.mapView.animate(to: camera)
         
         if location.horizontalAccuracy > 0 {
             locationManager.stopUpdatingLocation()
+            setLocationPreferences = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         }
         
     }
@@ -188,7 +195,6 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
         
         if let error = error {
             print("Unable to Forward Geocode Address (\(error))")
-            LabelString.text = "Unable to Find Location for Address"
             
         } else {
             var location: CLLocation?
@@ -202,13 +208,15 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
                 searchLat = coordinate.latitude
                 searchLong = coordinate.longitude
                 
+                setLocationPreferences = CLLocation(latitude: searchLat, longitude: searchLong)
+                
                 let camera = GMSCameraPosition.camera(withLatitude: searchLat,
                                                       longitude: searchLong,
                                                       zoom: zoomLevel)
                 self.mapView.animate(to: camera)
             } else {
-                LabelString.text = "No Matching Location Found"
             }
         }
     }
+    
 }

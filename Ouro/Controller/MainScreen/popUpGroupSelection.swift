@@ -10,9 +10,16 @@ import UIKit
 
 class popUpGroupSelection: UIViewController {
 
+    
+    @IBOutlet weak var SoloButton: UIButton!
+    @IBOutlet weak var GroupButton: UIButton!
+    @IBOutlet weak var CancelButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.9)
+        self.setButtons()
         self.showAnimate()
 
     }
@@ -36,17 +43,14 @@ class popUpGroupSelection: UIViewController {
             self.view.alpha = 0.0
         }, completion: { (finished: Bool) in
             if (finished) {
+                self.willMove(toParent: nil)
                 self.view.removeFromSuperview()
+                self.removeFromParent()
             }
         })
     }
     
     // MARK: Group Selection
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        if (segue.identifier == "GroupSegue") {
-//            // pass data to next view
-//        }
-//    }
     
     @IBAction func GroupButton(_ sender: Any) {
         performSegue(withIdentifier: "GroupSegue", sender: self)
@@ -56,5 +60,32 @@ class popUpGroupSelection: UIViewController {
         performSegue(withIdentifier: "SoloPreferencesSegue", sender: self)
     }
     
+    func setButtons() {
+        
+        self.view.addSubview(SoloButton)
+        self.view.addSubview(GroupButton)
+        self.view.addSubview(CancelButton)
+
+        SoloButton.translatesAutoresizingMaskIntoConstraints = false
+        GroupButton.translatesAutoresizingMaskIntoConstraints = false
+        CancelButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        SoloButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        SoloButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -45).isActive = true
+        SoloButton.heightAnchor.constraint(equalToConstant: 65.0).isActive = true
+        SoloButton.widthAnchor.constraint(equalToConstant: 215).isActive = true
+        
+        GroupButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        GroupButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 45).isActive = true
+        GroupButton.heightAnchor.constraint(equalToConstant: 65.0).isActive = true
+        GroupButton.widthAnchor.constraint(equalToConstant: 215).isActive = true
+
+        
+        CancelButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        CancelButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 115).isActive = true
+        CancelButton.heightAnchor.constraint(equalToConstant: 40.0).isActive = true
+        CancelButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
+
+    }
     
 }

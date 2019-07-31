@@ -7,8 +7,9 @@ target 'Ouro' do
 
   # Pods for Ouro
     pod 'GoogleMaps'
-    pod 'Firebase/Core'
+    pod 'Firebase'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
     pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
-
 
 end
