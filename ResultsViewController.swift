@@ -32,6 +32,7 @@ class ResultsViewController: UIViewController {
         Cuisine.text = "Italian"
         Date.text = "April 13"
         
+        
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
                 let timestamp = String(Int(NSDate().timeIntervalSince1970))
