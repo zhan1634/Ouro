@@ -8,7 +8,9 @@
 
 import UIKit
 import Firebase
-
+//EDIT: ******************(Single tone)
+var globalMainScreenVC : MainScreenController?
+//END EDIT: ******************
 class MainScreenController: UIViewController {
 
     let backgroundImageView = UIImageView()
@@ -27,33 +29,62 @@ class MainScreenController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+      //EDIT: ******************
+        globalMainScreenVC = self
+      //END EDIT: ******************
         // SET VIEWS
         self.setBackground()
         self.setLoginRegister()
         self.setCenter()
         self.setButtons()
+      
+      
+      
         
         // AUTHENTICATION LISTENER
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
+            
                 self.RegisterButton.removeFromSuperview()
                 self.SignInButton.removeFromSuperview()
                 self.setWelcome()
+              if let userName = UserDefaults.standard.value(forKey: "FB_name") as? String{
+                self.WelcomeLabel.text = "Welcome " + userName
+              }else{
                 self.WelcomeLabel.text = "Welcome " + String(user.email ?? "")
-            } else {
+              }
+            }else {
                 self.WelcomeLabel.removeFromSuperview()
                 self.SignOutButton.removeFromSuperview()
                 self.setLoginRegister()
             }
         }
+      
+      //Button Actions
+      tapGestureForCheckInButton()
         
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-
+  
+  
+  //EDIT: ******************
+  //MARK: Gesture For CheckIn button
+  func tapGestureForCheckInButton()  {
+    let tap = UITapGestureRecognizer(target: self, action: #selector(tapEventOfCheckInButton))
+    CheckInButton.isUserInteractionEnabled = true
+    CheckInButton.addGestureRecognizer(tap)
+  }
+  @objc func tapEventOfCheckInButton(){
+    let registrationVC = UIStoryboard(name: "Restaurant", bundle: nil).instantiateViewController(withIdentifier: "RestaurantListSegmnetPagerVC") as! RestaurantListSegmnetPagerVC
+    self.addChild(registrationVC)
+    registrationVC.view.frame = self.view.frame
+    self.view.addSubview(registrationVC.view)
+    registrationVC.didMove(toParent: self)
+  }
+  //END EDIT: ******************
     // MARK: Solo / Group Popover Presentation
     @IBAction func logoGroupSelection(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ouroSelectionGroup") as! popUpGroupSelection
@@ -64,12 +95,14 @@ class MainScreenController: UIViewController {
         
     }
     
+    
     @IBAction func RegisterUser(_ sender: Any) {
         self.registerUser()
     }
     
     func registerUser() {
         let registrationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "registerSelection") as! RegistrationViewController
+        registrationVC.delegate = self
         self.addChild(registrationVC)
         registrationVC.view.frame = self.view.frame
         self.view.addSubview(registrationVC.view)
@@ -79,6 +112,7 @@ class MainScreenController: UIViewController {
     @IBAction func LoginUser(_ sender: Any) {
         let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginSelection") as! LoginViewController
         self.addChild(loginVC)
+        loginVC.delegate = self
         loginVC.view.frame = self.view.frame
         self.view.addSubview(loginVC.view)
         loginVC.didMove(toParent: self)
@@ -87,6 +121,8 @@ class MainScreenController: UIViewController {
     @IBAction func LogOut(_ sender: Any) {
         do {
             try Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: "FB_name")
+            UserDefaults.standard.removeObject(forKey: "FB_ID")
         } catch {
             print("Error while signing out!")
         }
@@ -215,4 +251,21 @@ class MainScreenController: UIViewController {
         
     }
 }
+//EDIT: ******************
+extension MainScreenController: UserDataDelegate,UserDataLoginDelegate{
+  func getUserData(userData: [String : Any]) {
+    if let userName = UserDefaults.standard.value(forKey: "FB_name") as? String{
+       self.setWelcome()
+      self.WelcomeLabel.text = "Welcome " + userName
+    }
+  }
+  
+  func getUserLoginData(userData: [String : Any]) {
+    if let userName = UserDefaults.standard.value(forKey: "FB_name") as? String{
+      self.setWelcome()
+      self.WelcomeLabel.text = "Welcome " + userName
+    }
+  }
+}
 
+//END EDIT: ******************

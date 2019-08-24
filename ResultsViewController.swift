@@ -32,7 +32,6 @@ class ResultsViewController: UIViewController {
         Cuisine.text = "Italian"
         Date.text = "April 13"
         
-        
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
                 let timestamp = String(Int(NSDate().timeIntervalSince1970))
@@ -49,7 +48,10 @@ class ResultsViewController: UIViewController {
     
     
     @IBAction func CheckInSegue(_ sender: Any) {
-         performSegue(withIdentifier: "ResultsToCheckInSegue", sender: self)
+        let listVc = UIStoryboard(name: "Restaurant", bundle: nil).instantiateViewController(withIdentifier: "RestaurantListSegmnetPagerVC") as! RestaurantListSegmnetPagerVC
+        self.present(listVc, animated: true, completion: {
+            
+        })
     }
 
 }

@@ -9,7 +9,13 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
-
+import SDWebImage
+import Firebase
+import FacebookCore
+import FacebookLogin
+import FacebookShare
+import FBSDKLoginKit
+import FBSDKShareKit
 class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate, UISearchBarDelegate {
 
     // Location Variables
@@ -23,10 +29,9 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
     var verticalShift = CGFloat()
     var scrollState = Bool()
     let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "preferencesViewID") as! PreferencesViewController
-    
     // Button Variable
     @IBOutlet weak var GenerateButton: UIButton!
-    
+    @IBOutlet weak var imgProfile: UIImageView!
     // Search Variable
     lazy var geocoder = CLGeocoder()
     @IBOutlet weak var SearchBar: UISearchBar!
@@ -38,7 +43,26 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
+      //EDIT: ******************
+        let request =  GraphRequest(graphPath: "me")
+            request.start(completionHandler: { (connection, result, error) in
+                if error != nil {
+                    print(error?.localizedDescription as Any)
+                }else {
+                    if let userdata = result as? [String:Any] {
+                        let FB_id = userdata["id"] as? String
+                      if let FB_name = userdata["name"] as? String{
+                        UserDefaults.standard.set(FB_name, forKey: "FB_name")
+                      }
+                        if FB_id != nil {
+                            let url = "https://graph.facebook.com/\(FB_id!)/picture?type=large"
+                            self.imgProfile!.sd_setImage(with: URL(string: url), placeholderImage: #imageLiteral(resourceName: "Logo_White"), options: .retryFailed, progress: nil, completed: nil)
+                    }
+                }
+            }
+        })
+      
+      //EDIT END: ******************
         // Google Maps
         GMSServices.provideAPIKey("AIzaSyALizHyvUmnpjNuiwqRfyUStlP9ZLbcxn4")
         let camera = GMSCameraPosition.camera(withLatitude: 37.621262, longitude: -122.378945, zoom: 10)
@@ -47,25 +71,26 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
         mapView.settings.zoomGestures = false
         mapView.settings.consumesGesturesInView = false
         self.view = mapView
-
 //        locationManager.distanceFilter = 50
-        
         // Generate Button Properties
         GenerateButton.isHidden = false
+       //EDIT: ******************
+        GenerateButton.frame = CGRect(x: 40, y: self.view.frame.height/2+100, width: self.view.frame.width-80, height: 80)
+      //EDIT END: ******************
         self.view.addSubview(GenerateButton)
         
         // Generate Button Properties
         SearchBar.delegate = self
         SearchBar.isHidden = false
+        imgProfile.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(SearchBar)
-        
+        self.view.addSubview(imgProfile)
         // Drag initialization for preferences
         let drag = UIPanGestureRecognizer(target: self, action: #selector(ParametersViewController.touch(sender:)))
         view.addGestureRecognizer(drag)
         popOverVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY * (7/8), width: self.view.frame.width, height: self.view.frame.height)
         self.view.addSubview(popOverVC.view)
         scrollState = false
-
         // Location Properties
         locationManager = CLLocationManager()
         locationManager.requestWhenInUseAuthorization()
@@ -74,48 +99,42 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
         }
-
+        imgProfile.topAnchor.constraint(equalTo:  view.topAnchor, constant:50.0).isActive = true
+        imgProfile.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        imgProfile.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        imgProfile.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imgProfile.layer.borderWidth = 1
+        imgProfile.layer.masksToBounds = false
+        imgProfile.layer.borderColor = UIColor.clear.cgColor
+        imgProfile.layer.cornerRadius = imgProfile.frame.height/2
+        imgProfile.clipsToBounds = true
     }
-    
     // MARK: Button Pressed
-    
     @IBAction func Generate(_ sender: Any) {
-        
         let popGenerateVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GenerateScreen") as! GenerateViewController
         popGenerateVC.setLocation = self.setLocationPreferences
         self.addChild(popGenerateVC)
         popGenerateVC.view.frame = self.view.frame
         self.view.addSubview(popGenerateVC.view)
         popGenerateVC.didMove(toParent: self)
-        
     }
-
     // MARK: Scroll Screen Recognizer
-    
     @objc func touch(sender: UIPanGestureRecognizer) {
-
         let translation = sender.translation(in: self.view)
-        
         if sender.state == UIGestureRecognizer.State.began {
-        
             currentScroll = popOverVC.view.frame.minY
             if scrollState == true && translation.y > 0 {
                 popOverVC.removeFromParent()
                 popOverVC.UpDownLabel = "Up"
             }
-            
         } else if sender.state == UIGestureRecognizer.State.changed {
-            
             verticalShift = currentScroll + translation.y
-            
             if verticalShift > (self.view.frame.maxY * (7/8)) {
                 verticalShift = self.view.frame.maxY * (7/8)
             } else if verticalShift <= (self.view.frame.minY) {
                 verticalShift = self.view.frame.minY
             }
-
             self.popOverVC.view.frame = CGRect(x: 0, y: verticalShift, width: self.view.frame.width, height: self.view.frame.height)
-
         } else if sender.state == UIGestureRecognizer.State.ended {
 
             if scrollState == false && translation.y < 0 {
@@ -133,7 +152,6 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
                 scrollState = false
             }
         }
-
     }
     // Handle incoming location events.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -147,7 +165,9 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
         
         if location.horizontalAccuracy > 0 {
             locationManager.stopUpdatingLocation()
+         
             setLocationPreferences = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+         
         }
         
     }
@@ -182,7 +202,6 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
     {
         self.SearchBar.endEditing(true)
     }
-    
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         // Geocode Address String
         geocoder.geocodeAddressString(searchString) { (placemarks, error) in
@@ -190,7 +209,6 @@ class ParametersViewController: UIViewController, UIGestureRecognizerDelegate, C
             self.processResponse(withPlacemarks: placemarks, error: error)
         }
     }
-    
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         
         if let error = error {

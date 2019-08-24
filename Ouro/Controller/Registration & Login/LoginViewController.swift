@@ -8,6 +8,15 @@
 
 import UIKit
 import Firebase
+import FacebookCore
+import FacebookLogin
+import FacebookShare
+import FBSDKLoginKit
+import FBSDKShareKit
+
+protocol UserDataLoginDelegate {
+  func getUserLoginData(userData:[String:Any])
+}
 
 class LoginViewController: UIViewController {
 
@@ -19,11 +28,14 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var PasswordLabel: UILabel!
     @IBOutlet weak var PasswordLogin: UITextField!
     @IBOutlet weak var NLoginButton: UIButton!
-    
-    @IBOutlet weak var DontHaveAccountLabel: UILabel!
+  //EDIT: ******************
+  @IBOutlet weak var FacebookLoginButton: UIButton!
+   var delegate : UserDataLoginDelegate?
+  //END EDIT ******************
+  @IBOutlet weak var DontHaveAccountLabel: UILabel!
     @IBOutlet weak var SignUpButton: UIButton!
     
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +70,7 @@ class LoginViewController: UIViewController {
     @IBAction func SignUpPressed(_ sender: Any) {
         
         let registrationVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "registerSelection") as! RegistrationViewController
+        registrationVC.delegate = self
         self.parent!.addChild(registrationVC)
         registrationVC.view.frame = self.parent!.view.frame
         self.parent!.view.addSubview(registrationVC.view)
@@ -67,8 +80,59 @@ class LoginViewController: UIViewController {
         
     }
 
-
+ //EDIT: ******************
+  @IBAction func LoginWithFacebookPressed(_ sender: Any) {
+    loginButtonClicked()
+  }
+  
+  //EDIT: ******************
+  @objc func loginButtonClicked() {
     
+    let loginManager = LoginManager()
+    loginManager.logOut()
+    loginManager.logIn(permissions: [.publicProfile], viewController: self) { (loginResult) in
+      switch loginResult {
+      case .failed(let error):
+        print(error)
+      case .cancelled:
+        print("User cancelled login.")
+        
+      case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+        print("Logged in!")
+        
+        let credential = FacebookAuthProvider.credential(withAccessToken: AccessToken.current!.tokenString)
+        Auth.auth().signInAndRetrieveData(with: credential, completion: { (authResult, error) in
+          if let error = error {
+            print(error)
+            return
+          }
+          let request =  GraphRequest(graphPath: "me")
+          request.start(completionHandler: { (connection, result, error) in
+            if error != nil {
+              print(error as Any)
+            }else {
+              print(result as Any)
+              if let userdata = result as? [String:Any] {
+                if let FB_id = userdata["id"] as? String,let FB_name = userdata["name"] as? String{
+                  UserDefaults.standard.set(FB_id, forKey: "FB_ID")
+                  UserDefaults.standard.set(FB_name, forKey: "FB_name")
+                  self.delegate?.getUserLoginData(userData: userdata)
+                }
+              }
+            }
+          })
+          print(authResult as Any)
+          
+          self.willMove(toParent: nil)
+          self.view.removeFromSuperview()
+          self.removeFromParent()
+          // User is signed in
+          // ...
+        })
+      }
+    }
+  }
+  //END EDIT: ******************
     func setlabelswtextinputs() {
         
         let LabelArray = [EmailLabel, PasswordLabel]
@@ -116,6 +180,9 @@ class LoginViewController: UIViewController {
         
         LoginTitle.translatesAutoresizingMaskIntoConstraints = false
         NLoginButton.translatesAutoresizingMaskIntoConstraints = false
+      //EDIT: ******************
+        FacebookLoginButton.translatesAutoresizingMaskIntoConstraints = false
+      //END EDIT: ******************
         DontHaveAccountLabel.translatesAutoresizingMaskIntoConstraints = false
         SignUpButton.translatesAutoresizingMaskIntoConstraints = false
         GoBack.translatesAutoresizingMaskIntoConstraints = false
@@ -125,19 +192,25 @@ class LoginViewController: UIViewController {
         LoginTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition).isActive = true
         LoginTitle.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         LoginTitle.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
+
+   //EDIT: ******************
         NLoginButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 200.0).isActive = true
         NLoginButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
-        NLoginButton.widthAnchor.constraint(equalToConstant: 115).isActive = true
+        NLoginButton.widthAnchor.constraint(equalToConstant: PasswordLogin.frame.width).isActive = true
         NLoginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        DontHaveAccountLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 260.0).isActive = true
+      
+        FacebookLoginButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 260.0).isActive = true
+        FacebookLoginButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
+        FacebookLoginButton.widthAnchor.constraint(equalToConstant: PasswordLogin.frame.width).isActive = true
+        FacebookLoginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+   //END EDIT : ******************
+        DontHaveAccountLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 320).isActive = true
         DontHaveAccountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -25.0).isActive = true
         DontHaveAccountLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         DontHaveAccountLabel.widthAnchor.constraint(equalToConstant: 160).isActive = true
         DontHaveAccountLabel.adjustsFontSizeToFitWidth = true
         
-        SignUpButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 260.0).isActive = true
+        SignUpButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 320).isActive = true
         SignUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 60.0).isActive = true
         SignUpButton.heightAnchor.constraint(equalToConstant: 18).isActive = true
         SignUpButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
@@ -229,3 +302,11 @@ class LoginViewController: UIViewController {
         
     }
 }
+//EDIT: ******************
+extension LoginViewController: UserDataDelegate{
+  func getUserData(userData: [String : Any]) {
+    globalMainScreenVC?.getUserData(userData: userData)
+  }
+}
+
+//END EDIT:****************

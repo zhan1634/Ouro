@@ -16,6 +16,7 @@ class GenerateViewController: UIViewController {
     
     var ref = Database.database().reference().child("Restaurants")
     var geoFire = GeoFire(firebaseRef: Database.database().reference().child("Locations"))
+  
     var users = [String]()
     var resultKey = String()
     var resultDict = NSDictionary()
@@ -37,7 +38,7 @@ class GenerateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         showAnimate()
         runShadow()
@@ -68,11 +69,17 @@ class GenerateViewController: UIViewController {
     
     func runSearch() {
         let center = setLocation
-        let circleQuery = geoFire.query(at: center, withRadius: Double(UserDefaults.standard.float(forKey: "SearchDistance")))
+        var radius = UserDefaults.standard.double(forKey: "SearchDistance")
+        if radius <= 0 {
+            radius = 5
+        }//38 Dan Leckie Way Toronto
+      let circleQuery = geoFire.query(at: center, withRadius: radius)
         let queryHandle = circleQuery.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+         
             self.users.append(key)
- //           print(self.users)
+         // print("Users :",self.users)
         })
+      
         circleQuery.observeReady({ () -> Void in
             self.runResults(keyArray: self.users, completion: { (completeArray) in
                 let randomSelection = arc4random_uniform(UInt32(Int(completeArray.count - 1)))
@@ -91,6 +98,7 @@ class GenerateViewController: UIViewController {
             runResultsCount = runResultsCount + 1
             self.ref.child(key).observeSingleEvent(of: .value, with: { (snapshot) in
                 self.tempDict = snapshot.value as! NSDictionary
+              
                 if self.filterResults(tdict: self.tempDict) == true {
                     self.selectArray.append(self.tempDict)
                     completion(self.selectArray)
@@ -98,13 +106,23 @@ class GenerateViewController: UIViewController {
             })
         }
     }
+  //EDIT: **********
     func filterResults(tdict: NSDictionary) -> Bool {
         self.tempC = 0
-        if tdict["Price"] as? String == UserDefaults.standard.string(forKey: "PricePreference") {
-            self.tempC = 0
+      if let pricePreference: String = UserDefaults.standard.value(forKey: "PricePreference") as? String{
+        if tdict["Price"] as? String == pricePreference {
+          self.tempC = 0
         } else {
-            self.tempC = 1
+          self.tempC = 1
         }
+      }else{
+        if tdict["Price"] as? String == "$" {
+          self.tempC = 0
+        } else {
+          self.tempC = 1
+        }
+      }
+      
         if self.tempC == 1 {
             return false
         } else {
@@ -112,10 +130,7 @@ class GenerateViewController: UIViewController {
         }
         
     }
-    
-    
-    
-    
+  //END EDIT: **********
 }
 
 // MARK: LOAD GEODATA
