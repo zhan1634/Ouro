@@ -48,7 +48,10 @@ class ResultsViewController: UIViewController {
     
     
     @IBAction func CheckInSegue(_ sender: Any) {
-         performSegue(withIdentifier: "ResultsToCheckInSegue", sender: self)
+        let listVc = UIStoryboard(name: "Restaurant", bundle: nil).instantiateViewController(withIdentifier: "RestaurantListSegmnetPagerVC") as! RestaurantListSegmnetPagerVC
+        self.present(listVc, animated: true, completion: {
+            
+        })
     }
 
 }

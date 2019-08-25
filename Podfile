@@ -10,6 +10,10 @@ target 'Ouro' do
     pod 'Firebase'
     pod 'Firebase/Auth'
     pod 'Firebase/Database'
-    pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
-
+    pod 'GeoFire'
+    pod 'SDWebImage'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FacebookShare'
+    pod 'MXSegmentedPager'
 end

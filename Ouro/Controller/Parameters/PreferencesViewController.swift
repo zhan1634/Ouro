@@ -76,8 +76,26 @@ class PreferencesViewController: UIViewController {
     @IBAction func PriceSliderChanged(_ sender: UISlider) {
         UserDefaults.standard.set(String(repeating: "$", count: Int(sender.value)), forKey: "PricePreference")
     }
-    
-    func setupstartinglabel() {
+  
+  
+  //EDIT: ***************
+  @IBAction func priceSegmentChanged(_ sender: Any) {
+    switch PriceSlider.selectedSegmentIndex {
+    case 0:
+      UserDefaults.standard.set("$", forKey: "PricePreference")
+    case 1:
+       UserDefaults.standard.set("$$", forKey: "PricePreference")
+    case 2:
+       UserDefaults.standard.set("$$$", forKey: "PricePreference")
+    case 3:
+       UserDefaults.standard.set("$$$$", forKey: "PricePreference")
+    default:
+      UserDefaults.standard.set("$", forKey: "PricePreference")
+    }
+  }
+  //END EDIT: ***************
+  
+  func setupstartinglabel() {
         
         self.view.addSubview(PreferencesLabel)
         self.view.addSubview(UpDown)

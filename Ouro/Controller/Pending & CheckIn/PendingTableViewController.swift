@@ -11,7 +11,13 @@ import Firebase
 class PendingTableViewController: UITableViewController {
     
     var ref = Database.database().reference()
-    var pendingdict = [[Int: NSDictionary]]()
+  var pendingdict = [[Int: NSDictionary]](){
+    didSet{
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
+    }
+  }
 
     override func viewDidLoad() {
         
@@ -27,20 +33,24 @@ class PendingTableViewController: UITableViewController {
                         let timestamp_int = Int(timestamp)
                         let pending = [timestamp_int: value]
                         self.pendingdict.append(pending as! [Int : NSDictionary])
-                        print(self.pendingdict)
+                       
                     }})
             } else {
                 print("No Logged In User")
             }
         }
-
+      
+      
+     
         super.viewDidLoad()
-
+      
+    
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+      self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -55,15 +65,19 @@ class PendingTableViewController: UITableViewController {
         return 0
     }
 
-    /*
+  /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTableViewCell", for: indexPath) as! PendingTableViewCell
+     
+      
 
         return cell
     }
-    */
+  
+  override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return 80.0
+  }
+ */
 
     /*
     // Override to support conditional editing of the table view.

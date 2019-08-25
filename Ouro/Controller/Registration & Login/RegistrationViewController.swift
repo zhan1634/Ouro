@@ -9,6 +9,18 @@
 import UIKit
 import Firebase
 
+//EDIT: ******************
+//import FacebookCore
+//import FacebookLogin
+//import FacebookShare
+//import FBSDKLoginKit
+//import FBSDKShareKit
+
+//END EDIT: ******************
+
+protocol UserDataDelegate {
+  func getUserData(userData:[String:Any])
+}
 class RegistrationViewController: UIViewController {
 
     @IBOutlet weak var RegisterLabel: UILabel!
@@ -24,6 +36,7 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var AlreadyHaveAccountLabel: UILabel!
     @IBOutlet weak var SignInButton: UIButton!
     
+
     @IBOutlet weak var FirstNameRegister: UITextField!
     @IBOutlet weak var LastNameRegister: UITextField!
     @IBOutlet weak var PhoneNumberRegister: UITextField!
@@ -32,7 +45,9 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var ConfirmPasswordRegister: UITextField!
 
     @IBOutlet weak var NRegisterButton: UIButton!
-    
+  
+  
+   var delegate : UserDataDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +58,11 @@ class RegistrationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+  
+  //EDIT: ******************
+ //Log In with Facebook code removed
+  
+  //END EDIT ******************
     @IBAction func RegisterUser(_ sender: Any) {
         
         Auth.auth().createUser(withEmail: EmailRegister.text!, password: PasswordRegister.text!) {
@@ -123,12 +142,14 @@ class RegistrationViewController: UIViewController {
         self.view.addSubview(AlreadyHaveAccountLabel)
         self.view.addSubview(SignInButton)
         self.view.addSubview(NRegisterButton)
+      //  self.view.addSubview(btnFaceBook)
         self.view.addSubview(GoBack)
 
         RegisterLabel.translatesAutoresizingMaskIntoConstraints = false
         AlreadyHaveAccountLabel.translatesAutoresizingMaskIntoConstraints = false
         SignInButton.translatesAutoresizingMaskIntoConstraints = false
         NRegisterButton.translatesAutoresizingMaskIntoConstraints = false
+       // btnFaceBook.translatesAutoresizingMaskIntoConstraints = false
         GoBack.translatesAutoresizingMaskIntoConstraints = false
         
         let startingPosition = (self.view.frame.height - 400) / 2 - 55.0
@@ -141,14 +162,19 @@ class RegistrationViewController: UIViewController {
         NRegisterButton.heightAnchor.constraint(equalToConstant: 35).isActive = true
         NRegisterButton.widthAnchor.constraint(equalToConstant: 115).isActive = true
         NRegisterButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+       
+//        btnFaceBook.topAnchor.constraint(equalTo:  view.topAnchor, constant: startingPosition + 500.0).isActive = true
+//        btnFaceBook.heightAnchor.constraint(equalToConstant: 35).isActive = true
+//        btnFaceBook.widthAnchor.constraint(equalToConstant: 35).isActive = true
+//        btnFaceBook.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 
-        AlreadyHaveAccountLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 515.0).isActive = true
+        AlreadyHaveAccountLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 500.0).isActive = true
         AlreadyHaveAccountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -25.0).isActive = true
         AlreadyHaveAccountLabel.heightAnchor.constraint(equalToConstant: 18).isActive = true
         AlreadyHaveAccountLabel.widthAnchor.constraint(equalToConstant: 160).isActive = true
         AlreadyHaveAccountLabel.adjustsFontSizeToFitWidth = true
         
-        SignInButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 515.0).isActive = true
+        SignInButton.topAnchor.constraint(equalTo: view.topAnchor, constant: startingPosition + 500.0).isActive = true
         SignInButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 70.0).isActive = true
         SignInButton.heightAnchor.constraint(equalToConstant: 18).isActive = true
         SignInButton.widthAnchor.constraint(equalToConstant: 40).isActive = true
