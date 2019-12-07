@@ -7,284 +7,504 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1FBB531822F82A0A0010EC5C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBB531722F82A0A0010EC5C /* FBSDKCoreKit.framework */; };
-		1FBB531A22F82A100010EC5C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FBB531922F82A100010EC5C /* FBSDKLoginKit.framework */; };
-		1FD474392302AFD10016DD84 /* HistroryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD474382302AFD10016DD84 /* HistroryTableViewCell.swift */; };
-		1FD4743B2302C3030016DD84 /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD4743A2302C3030016DD84 /* UpcomingTableViewCell.swift */; };
-		1FDAC5D622FEA21400CD7DBB /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FDAC5D522FEA21400CD7DBB /* Restaurant.storyboard */; };
-		1FDAC5D922FEA6A900CD7DBB /* RestaurantListSegmnetPagerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAC5D822FEA6A900CD7DBB /* RestaurantListSegmnetPagerVC.swift */; };
-		1FDAC5DB22FEA6DC00CD7DBB /* HistoryListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAC5DA22FEA6DC00CD7DBB /* HistoryListVC.swift */; };
-		1FDAC5DD22FEA6F000CD7DBB /* UpcomingListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FDAC5DC22FEA6F000CD7DBB /* UpcomingListVC.swift */; };
-		6A30EF8D227E57AF00874830 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6A30EF8C227E57AF00874830 /* GoogleService-Info.plist */; };
-		6A595B97227BB80D004BD03C /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B96227BB80D004BD03C /* GenerateViewController.swift */; };
-		6A595B9A227BB8B8004BD03C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B99227BB8B8004BD03C /* LoginViewController.swift */; };
-		6A595B9C227BB8C7004BD03C /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */; };
-		6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */; };
-		6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */; };
-		6AC5E2C322764BD8001210B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C122764BD8001210B8 /* Main.storyboard */; };
-		6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */; };
-		6AC5E2C822764BDA001210B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C722764BDA001210B8 /* Assets.xcassets */; };
-		6AC5E2CB22764BDA001210B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */; };
-		6AD8A3D622766C6800947D14 /* popUpGroupSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */; };
-		6AD8A3DA227676DF00947D14 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */; };
-		6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */; };
-		6AD8A3E42276897E00947D14 /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3E32276897E00947D14 /* ParametersViewController.swift */; };
-		6AD8A3E722768AEB00947D14 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD8A3E622768AEB00947D14 /* PreferencesViewController.swift */; };
-		6AFE29DF22D0446300C34202 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE29DE22D0446300C34202 /* ResultsViewController.swift */; };
-		6AFE29E322D045B100C34202 /* PendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AFE29E222D045B100C34202 /* PendingTableViewController.swift */; };
-		EDE68495389D2E1F43A3748C /* Pods_Ouro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */; };
+		107D1442EA2C0AD30996672E /* Pods_OuroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FBBDDAE1B6EF7B4C1B002F5 /* Pods_OuroTests.framework */; };
+		4F94C4EE237296D200DE98B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C4ED237296D200DE98B6 /* AppDelegate.swift */; };
+		4F94C4F5237296D200DE98B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C4F3237296D200DE98B6 /* Main.storyboard */; };
+		4F94C4F7237296D300DE98B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C4F6237296D300DE98B6 /* Assets.xcassets */; };
+		4F94C4FA237296D300DE98B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C4F8237296D300DE98B6 /* LaunchScreen.storyboard */; };
+		4F94C505237296D300DE98B6 /* OuroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C504237296D300DE98B6 /* OuroTests.swift */; };
+		4F94C510237296D300DE98B6 /* OuroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C50F237296D300DE98B6 /* OuroUITests.swift */; };
+		4F94C5352372972600DE98B6 /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5292372972600DE98B6 /* GFBase32Utils.m */; };
+		4F94C5362372972600DE98B6 /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C52B2372972600DE98B6 /* GeoFire.m */; };
+		4F94C5372372972600DE98B6 /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C52C2372972600DE98B6 /* GFGeoHashQuery.m */; };
+		4F94C5382372972600DE98B6 /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C52D2372972600DE98B6 /* GFQuery.m */; };
+		4F94C5392372972600DE98B6 /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C52E2372972600DE98B6 /* GFGeoHash.m */; };
+		4F94C53C2372980D00DE98B6 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C53B2372980D00DE98B6 /* style.json */; };
+		4F94C5402372983D00DE98B6 /* GenerateExperianceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C53F2372983D00DE98B6 /* GenerateExperianceVC.swift */; };
+		4F94C54A2372987000DE98B6 /* RestaurantUpcomingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5442372987000DE98B6 /* RestaurantUpcomingCell.swift */; };
+		4F94C54B2372987000DE98B6 /* RestaurantUpcomingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C5452372987000DE98B6 /* RestaurantUpcomingCell.xib */; };
+		4F94C54C2372987000DE98B6 /* RestaurantheaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5462372987000DE98B6 /* RestaurantheaderCell.swift */; };
+		4F94C54D2372987000DE98B6 /* RestaurantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5472372987000DE98B6 /* RestaurantCell.swift */; };
+		4F94C54E2372987000DE98B6 /* RestaurantheaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C5482372987000DE98B6 /* RestaurantheaderCell.xib */; };
+		4F94C54F2372987000DE98B6 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C5492372987000DE98B6 /* RestaurantCell.xib */; };
+		4F94C5512372988100DE98B6 /* RestaurantFoodOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5502372988100DE98B6 /* RestaurantFoodOrderVC.swift */; };
+		4F94C5622372989500DE98B6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5532372989500DE98B6 /* LoginVC.swift */; };
+		4F94C5632372989500DE98B6 /* GoogleMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5542372989500DE98B6 /* GoogleMapVC.swift */; };
+		4F94C5642372989500DE98B6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5552372989500DE98B6 /* SignUpVC.swift */; };
+		4F94C5652372989500DE98B6 /* ChooseExperianceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5562372989500DE98B6 /* ChooseExperianceVC.swift */; };
+		4F94C5662372989500DE98B6 /* PreferencesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5582372989500DE98B6 /* PreferencesVC.swift */; };
+		4F94C5672372989500DE98B6 /* PreferencesSwitchTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C55A2372989500DE98B6 /* PreferencesSwitchTabelCell.swift */; };
+		4F94C5682372989500DE98B6 /* PreferencesTabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C55B2372989500DE98B6 /* PreferencesTabelCell.swift */; };
+		4F94C5692372989500DE98B6 /* PreferencesTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C55C2372989500DE98B6 /* PreferencesTabelCell.xib */; };
+		4F94C56A2372989500DE98B6 /* PreferencesSwitchTabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F94C55D2372989500DE98B6 /* PreferencesSwitchTabelCell.xib */; };
+		4F94C56B2372989500DE98B6 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C55F2372989500DE98B6 /* UserModel.swift */; };
+		4F94C56C2372989500DE98B6 /* ViewPreferencesDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5602372989500DE98B6 /* ViewPreferencesDetailVC.swift */; };
+		4F94C56D2372989500DE98B6 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C5612372989500DE98B6 /* MainVC.swift */; };
+		4F94C57A237298AB00DE98B6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C56F237298AB00DE98B6 /* SearchView.swift */; };
+		4F94C57B237298AB00DE98B6 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C570237298AB00DE98B6 /* BaseViewController.swift */; };
+		4F94C57C237298AB00DE98B6 /* myView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C571237298AB00DE98B6 /* myView.swift */; };
+		4F94C57D237298AB00DE98B6 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C572237298AB00DE98B6 /* TextFieldView.swift */; };
+		4F94C57E237298AB00DE98B6 /* CustomeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C573237298AB00DE98B6 /* CustomeSwitch.swift */; };
+		4F94C57F237298AB00DE98B6 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C574237298AB00DE98B6 /* AppConstant.swift */; };
+		4F94C580237298AB00DE98B6 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C575237298AB00DE98B6 /* AppUtility.swift */; };
+		4F94C581237298AB00DE98B6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C576237298AB00DE98B6 /* Utility.swift */; };
+		4F94C582237298AB00DE98B6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C577237298AB00DE98B6 /* GradientView.swift */; };
+		4F94C583237298AB00DE98B6 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C578237298AB00DE98B6 /* ButtonView.swift */; };
+		4F94C584237298AB00DE98B6 /* labelview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C579237298AB00DE98B6 /* labelview.swift */; };
+		4F94C586237298F700DE98B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C585237298F700DE98B6 /* SceneDelegate.swift */; };
+		4F94C58B2372C94D00DE98B6 /* UserLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C58A2372C94D00DE98B6 /* UserLocationVC.swift */; };
+		4FF7558C23756AA5001CBE07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF7558B23756AA5001CBE07 /* GoogleService-Info.plist */; };
+		4FF7558F237574D0001CBE07 /* Generatedexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF7558E237574D0001CBE07 /* Generatedexp.swift */; };
+		50FD1DC4E1712B4B10D35BE3 /* Pods_Ouro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EC7627E0FB7B9439A162D0 /* Pods_Ouro.framework */; };
+		F5FBCC4EF3F4CEAE6A81F378 /* Pods_OuroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE989D566416A469676E3F8 /* Pods_OuroUITests.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4F94C501237296D300DE98B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F94C4E2237296D200DE98B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F94C4E9237296D200DE98B6;
+			remoteInfo = Ouro;
+		};
+		4F94C50C237296D300DE98B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F94C4E2237296D200DE98B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F94C4E9237296D200DE98B6;
+			remoteInfo = Ouro;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		1FBB531722F82A0A0010EC5C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FBB531922F82A100010EC5C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FD474382302AFD10016DD84 /* HistroryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistroryTableViewCell.swift; sourceTree = "<group>"; };
-		1FD4743A2302C3030016DD84 /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
-		1FDAC5D522FEA21400CD7DBB /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
-		1FDAC5D822FEA6A900CD7DBB /* RestaurantListSegmnetPagerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListSegmnetPagerVC.swift; sourceTree = "<group>"; };
-		1FDAC5DA22FEA6DC00CD7DBB /* HistoryListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryListVC.swift; sourceTree = "<group>"; };
-		1FDAC5DC22FEA6F000CD7DBB /* UpcomingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingListVC.swift; sourceTree = "<group>"; };
-		26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.debug.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.debug.xcconfig"; sourceTree = "<group>"; };
-		6A30EF8C227E57AF00874830 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		6A595B96227BB80D004BD03C /* GenerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
-		6A595B99227BB8B8004BD03C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		6AC5E2BA22764BD8001210B8 /* Ouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ouro.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
-		6AC5E2C222764BD8001210B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6AC5E2C522764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ouro_iOSApplication_v1.xcdatamodel; sourceTree = "<group>"; };
-		6AC5E2C722764BDA001210B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6AC5E2CA22764BDA001210B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6AC5E2CC22764BDA001210B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popUpGroupSelection.swift; sourceTree = "<group>"; };
-		6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
-		6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsSelectionViewController.swift; sourceTree = "<group>"; };
-		6AD8A3E32276897E00947D14 /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
-		6AD8A3E622768AEB00947D14 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PreferencesViewController.swift; path = Ouro/Controller/Parameters/PreferencesViewController.swift; sourceTree = SOURCE_ROOT; };
-		6AFE29DE22D0446300C34202 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResultsViewController.swift; path = ../../../ResultsViewController.swift; sourceTree = "<group>"; };
-		6AFE29E222D045B100C34202 /* PendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingTableViewController.swift; sourceTree = "<group>"; };
-		E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ouro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.release.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.release.xcconfig"; sourceTree = "<group>"; };
+		386B82CF7E7361B43C6765FD /* Pods-Ouro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.debug.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.debug.xcconfig"; sourceTree = "<group>"; };
+		42EC7627E0FB7B9439A162D0 /* Pods_Ouro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ouro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D2AD8A631903FFD0334CA90 /* Pods-OuroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OuroUITests.release.xcconfig"; path = "Target Support Files/Pods-OuroUITests/Pods-OuroUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4F94C4EA237296D200DE98B6 /* Ouro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ouro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94C4ED237296D200DE98B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4F94C4F4237296D200DE98B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F94C4F6237296D300DE98B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F94C4F9237296D300DE98B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F94C4FB237296D300DE98B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94C500237296D300DE98B6 /* OuroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OuroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94C504237296D300DE98B6 /* OuroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuroTests.swift; sourceTree = "<group>"; };
+		4F94C506237296D300DE98B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94C50B237296D300DE98B6 /* OuroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OuroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F94C50F237296D300DE98B6 /* OuroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuroUITests.swift; sourceTree = "<group>"; };
+		4F94C511237296D300DE98B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F94C5202372970400DE98B6 /* Ouro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ouro-Bridging-Header.h"; sourceTree = "<group>"; };
+		4F94C5252372972600DE98B6 /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
+		4F94C5262372972600DE98B6 /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
+		4F94C5272372972600DE98B6 /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
+		4F94C5282372972600DE98B6 /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
+		4F94C5292372972600DE98B6 /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
+		4F94C52A2372972600DE98B6 /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
+		4F94C52B2372972600DE98B6 /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
+		4F94C52C2372972600DE98B6 /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
+		4F94C52D2372972600DE98B6 /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
+		4F94C52E2372972600DE98B6 /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
+		4F94C5302372972600DE98B6 /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
+		4F94C5312372972600DE98B6 /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
+		4F94C5322372972600DE98B6 /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
+		4F94C5332372972600DE98B6 /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
+		4F94C5342372972600DE98B6 /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
+		4F94C53B2372980D00DE98B6 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		4F94C53F2372983D00DE98B6 /* GenerateExperianceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateExperianceVC.swift; sourceTree = "<group>"; };
+		4F94C5442372987000DE98B6 /* RestaurantUpcomingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantUpcomingCell.swift; sourceTree = "<group>"; };
+		4F94C5452372987000DE98B6 /* RestaurantUpcomingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantUpcomingCell.xib; sourceTree = "<group>"; };
+		4F94C5462372987000DE98B6 /* RestaurantheaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantheaderCell.swift; sourceTree = "<group>"; };
+		4F94C5472372987000DE98B6 /* RestaurantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantCell.swift; sourceTree = "<group>"; };
+		4F94C5482372987000DE98B6 /* RestaurantheaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantheaderCell.xib; sourceTree = "<group>"; };
+		4F94C5492372987000DE98B6 /* RestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RestaurantCell.xib; sourceTree = "<group>"; };
+		4F94C5502372988100DE98B6 /* RestaurantFoodOrderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantFoodOrderVC.swift; sourceTree = "<group>"; };
+		4F94C5532372989500DE98B6 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4F94C5542372989500DE98B6 /* GoogleMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapVC.swift; sourceTree = "<group>"; };
+		4F94C5552372989500DE98B6 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		4F94C5562372989500DE98B6 /* ChooseExperianceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseExperianceVC.swift; sourceTree = "<group>"; };
+		4F94C5582372989500DE98B6 /* PreferencesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesVC.swift; sourceTree = "<group>"; };
+		4F94C55A2372989500DE98B6 /* PreferencesSwitchTabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesSwitchTabelCell.swift; sourceTree = "<group>"; };
+		4F94C55B2372989500DE98B6 /* PreferencesTabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTabelCell.swift; sourceTree = "<group>"; };
+		4F94C55C2372989500DE98B6 /* PreferencesTabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesTabelCell.xib; sourceTree = "<group>"; };
+		4F94C55D2372989500DE98B6 /* PreferencesSwitchTabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesSwitchTabelCell.xib; sourceTree = "<group>"; };
+		4F94C55F2372989500DE98B6 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		4F94C5602372989500DE98B6 /* ViewPreferencesDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPreferencesDetailVC.swift; sourceTree = "<group>"; };
+		4F94C5612372989500DE98B6 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		4F94C56F237298AB00DE98B6 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4F94C570237298AB00DE98B6 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		4F94C571237298AB00DE98B6 /* myView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myView.swift; sourceTree = "<group>"; };
+		4F94C572237298AB00DE98B6 /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		4F94C573237298AB00DE98B6 /* CustomeSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeSwitch.swift; sourceTree = "<group>"; };
+		4F94C574237298AB00DE98B6 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		4F94C575237298AB00DE98B6 /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		4F94C576237298AB00DE98B6 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		4F94C577237298AB00DE98B6 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		4F94C578237298AB00DE98B6 /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		4F94C579237298AB00DE98B6 /* labelview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = labelview.swift; sourceTree = "<group>"; };
+		4F94C585237298F700DE98B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4F94C58A2372C94D00DE98B6 /* UserLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationVC.swift; sourceTree = "<group>"; };
+		4FBBDDAE1B6EF7B4C1B002F5 /* Pods_OuroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OuroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FF7558B23756AA5001CBE07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FF7558E237574D0001CBE07 /* Generatedexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generatedexp.swift; sourceTree = "<group>"; };
+		5CE989D566416A469676E3F8 /* Pods_OuroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OuroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D144ADCE74641E856E9C9B8 /* Pods-OuroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OuroTests.release.xcconfig"; path = "Target Support Files/Pods-OuroTests/Pods-OuroTests.release.xcconfig"; sourceTree = "<group>"; };
+		79FC7200834BB1980D4C5D60 /* Pods-Ouro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ouro.release.xcconfig"; path = "Target Support Files/Pods-Ouro/Pods-Ouro.release.xcconfig"; sourceTree = "<group>"; };
+		7B8B8C666552E265320867C2 /* Pods-OuroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OuroTests.debug.xcconfig"; path = "Target Support Files/Pods-OuroTests/Pods-OuroTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86046E7BAA52072A4B16956D /* Pods-OuroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OuroUITests.debug.xcconfig"; path = "Target Support Files/Pods-OuroUITests/Pods-OuroUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6AC5E2B722764BD8001210B8 /* Frameworks */ = {
+		4F94C4E7237296D200DE98B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FBB531A22F82A100010EC5C /* FBSDKLoginKit.framework in Frameworks */,
-				1FBB531822F82A0A0010EC5C /* FBSDKCoreKit.framework in Frameworks */,
-				EDE68495389D2E1F43A3748C /* Pods_Ouro.framework in Frameworks */,
+				50FD1DC4E1712B4B10D35BE3 /* Pods_Ouro.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C4FD237296D300DE98B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				107D1442EA2C0AD30996672E /* Pods_OuroTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C508237296D300DE98B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5FBCC4EF3F4CEAE6A81F378 /* Pods_OuroUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1FDAC5D722FEA64000CD7DBB /* RestaurantListVc */ = {
+		102C1C8DC8ACEFD84E87C71C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAC5DE22FEC2D300CD7DBB /* Table cell */,
-				1FDAC5D822FEA6A900CD7DBB /* RestaurantListSegmnetPagerVC.swift */,
-				1FDAC5DA22FEA6DC00CD7DBB /* HistoryListVC.swift */,
-				1FDAC5DC22FEA6F000CD7DBB /* UpcomingListVC.swift */,
+				386B82CF7E7361B43C6765FD /* Pods-Ouro.debug.xcconfig */,
+				79FC7200834BB1980D4C5D60 /* Pods-Ouro.release.xcconfig */,
+				7B8B8C666552E265320867C2 /* Pods-OuroTests.debug.xcconfig */,
+				6D144ADCE74641E856E9C9B8 /* Pods-OuroTests.release.xcconfig */,
+				86046E7BAA52072A4B16956D /* Pods-OuroUITests.debug.xcconfig */,
+				4D2AD8A631903FFD0334CA90 /* Pods-OuroUITests.release.xcconfig */,
 			);
-			path = RestaurantListVc;
+			path = Pods;
 			sourceTree = "<group>";
 		};
-		1FDAC5DE22FEC2D300CD7DBB /* Table cell */ = {
+		4F94C4E1237296D200DE98B6 = {
 			isa = PBXGroup;
 			children = (
-				1FD474382302AFD10016DD84 /* HistroryTableViewCell.swift */,
-				1FD4743A2302C3030016DD84 /* UpcomingTableViewCell.swift */,
-			);
-			path = "Table cell";
-			sourceTree = "<group>";
-		};
-		6A595B98227BB816004BD03C /* Generate */ = {
-			isa = PBXGroup;
-			children = (
-				6A595B96227BB80D004BD03C /* GenerateViewController.swift */,
-				6AFE29DE22D0446300C34202 /* ResultsViewController.swift */,
-			);
-			path = Generate;
-			sourceTree = "<group>";
-		};
-		6A595B9D227BB8D7004BD03C /* Registration & Login */ = {
-			isa = PBXGroup;
-			children = (
-				6A595B9B227BB8C7004BD03C /* RegistrationViewController.swift */,
-				6A595B99227BB8B8004BD03C /* LoginViewController.swift */,
-			);
-			path = "Registration & Login";
-			sourceTree = "<group>";
-		};
-		6AC5E2B122764BD8001210B8 = {
-			isa = PBXGroup;
-			children = (
-				6AC5E2BC22764BD8001210B8 /* Ouro */,
-				6AC5E2BB22764BD8001210B8 /* Products */,
-				B42D4C95342368DE9F5B2480 /* Pods */,
-				6AFA9C0E227E53D8001D977F /* Supporting FIles */,
-				96FBCE03554C20A4AA10CE49 /* Frameworks */,
+				4F94C4EC237296D200DE98B6 /* Ouro */,
+				4F94C503237296D300DE98B6 /* OuroTests */,
+				4F94C50E237296D300DE98B6 /* OuroUITests */,
+				4F94C4EB237296D200DE98B6 /* Products */,
+				102C1C8DC8ACEFD84E87C71C /* Pods */,
+				7AE0EE2CFB4502EC42EE51D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6AC5E2BB22764BD8001210B8 /* Products */ = {
+		4F94C4EB237296D200DE98B6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BA22764BD8001210B8 /* Ouro.app */,
+				4F94C4EA237296D200DE98B6 /* Ouro.app */,
+				4F94C500237296D300DE98B6 /* OuroTests.xctest */,
+				4F94C50B237296D300DE98B6 /* OuroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6AC5E2BC22764BD8001210B8 /* Ouro */ = {
+		4F94C4EC237296D200DE98B6 /* Ouro */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BD22764BD8001210B8 /* AppDelegate.swift */,
-				6AC5E2D222764BEA001210B8 /* Controller */,
-				6AC5E2D322764BF7001210B8 /* View */,
-				6AC5E2D422764BFF001210B8 /* Model */,
-				6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */,
+				4FF7558D23757496001CBE07 /* Model */,
+				4FF7558B23756AA5001CBE07 /* GoogleService-Info.plist */,
+				4F94C56E237298AB00DE98B6 /* View */,
+				4F94C53D2372982300DE98B6 /* View Controller */,
+				4F94C53A237297F500DE98B6 /* Resource */,
+				4F94C51D237296E200DE98B6 /* GeoFire */,
+				4F94C4ED237296D200DE98B6 /* AppDelegate.swift */,
+				4F94C585237298F700DE98B6 /* SceneDelegate.swift */,
+				4F94C4F3237296D200DE98B6 /* Main.storyboard */,
+				4F94C4F6237296D300DE98B6 /* Assets.xcassets */,
+				4F94C4F8237296D300DE98B6 /* LaunchScreen.storyboard */,
+				4F94C4FB237296D300DE98B6 /* Info.plist */,
 			);
 			path = Ouro;
 			sourceTree = "<group>";
 		};
-		6AC5E2D222764BEA001210B8 /* Controller */ = {
+		4F94C503237296D300DE98B6 /* OuroTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FDAC5D722FEA64000CD7DBB /* RestaurantListVc */,
-				6A595B9D227BB8D7004BD03C /* Registration & Login */,
-				6AD8A3E5227689AB00947D14 /* MainScreen */,
-				6AD8A3E22276892C00947D14 /* Parameters */,
-				6AD8A3DB2276772500947D14 /* FriendsSelection */,
-				6A595B98227BB816004BD03C /* Generate */,
-				6AFE29DB22D0439900C34202 /* Pending & CheckIn */,
+				4F94C504237296D300DE98B6 /* OuroTests.swift */,
+				4F94C506237296D300DE98B6 /* Info.plist */,
 			);
-			path = Controller;
+			path = OuroTests;
 			sourceTree = "<group>";
 		};
-		6AC5E2D322764BF7001210B8 /* View */ = {
+		4F94C50E237296D300DE98B6 /* OuroUITests */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2C122764BD8001210B8 /* Main.storyboard */,
-				1FDAC5D522FEA21400CD7DBB /* Restaurant.storyboard */,
+				4F94C50F237296D300DE98B6 /* OuroUITests.swift */,
+				4F94C511237296D300DE98B6 /* Info.plist */,
 			);
-			path = View;
+			path = OuroUITests;
 			sourceTree = "<group>";
 		};
-		6AC5E2D422764BFF001210B8 /* Model */ = {
+		4F94C51D237296E200DE98B6 /* GeoFire */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */,
-				6AC5E2CC22764BDA001210B8 /* Info.plist */,
-				6A30EF8C227E57AF00874830 /* GoogleService-Info.plist */,
-				6AC5E2C722764BDA001210B8 /* Assets.xcassets */,
+				4F94C52F2372972600DE98B6 /* API */,
+				4F94C5342372972600DE98B6 /* GeoFire-Prefix.pch */,
+				4F94C5242372972600DE98B6 /* Implementation */,
+				4F94C5202372970400DE98B6 /* Ouro-Bridging-Header.h */,
+			);
+			path = GeoFire;
+			sourceTree = "<group>";
+		};
+		4F94C5242372972600DE98B6 /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5252372972600DE98B6 /* GFBase32Utils.h */,
+				4F94C5262372972600DE98B6 /* GFGeoHashQuery.h */,
+				4F94C5272372972600DE98B6 /* GFGeoHash.h */,
+				4F94C5282372972600DE98B6 /* GFQuery+Private.h */,
+				4F94C5292372972600DE98B6 /* GFBase32Utils.m */,
+				4F94C52A2372972600DE98B6 /* GeoFire+Private.h */,
+				4F94C52B2372972600DE98B6 /* GeoFire.m */,
+				4F94C52C2372972600DE98B6 /* GFGeoHashQuery.m */,
+				4F94C52D2372972600DE98B6 /* GFQuery.m */,
+				4F94C52E2372972600DE98B6 /* GFGeoHash.m */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		4F94C52F2372972600DE98B6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5302372972600DE98B6 /* GFRegionQuery.h */,
+				4F94C5312372972600DE98B6 /* GeoFire.h */,
+				4F94C5322372972600DE98B6 /* GFQuery.h */,
+				4F94C5332372972600DE98B6 /* GFCircleQuery.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4F94C53A237297F500DE98B6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C53B2372980D00DE98B6 /* style.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		4F94C53D2372982300DE98B6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5522372989500DE98B6 /* Main Screen */,
+				4F94C5422372985700DE98B6 /* Rstaurant Order */,
+				4F94C53E2372982E00DE98B6 /* GenerateExperiance */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		4F94C53E2372982E00DE98B6 /* GenerateExperiance */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C53F2372983D00DE98B6 /* GenerateExperianceVC.swift */,
+			);
+			path = GenerateExperiance;
+			sourceTree = "<group>";
+		};
+		4F94C5422372985700DE98B6 /* Rstaurant Order */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5502372988100DE98B6 /* RestaurantFoodOrderVC.swift */,
+				4F94C5432372986100DE98B6 /* Tabel Cell */,
+			);
+			path = "Rstaurant Order";
+			sourceTree = "<group>";
+		};
+		4F94C5432372986100DE98B6 /* Tabel Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5472372987000DE98B6 /* RestaurantCell.swift */,
+				4F94C5492372987000DE98B6 /* RestaurantCell.xib */,
+				4F94C5462372987000DE98B6 /* RestaurantheaderCell.swift */,
+				4F94C5482372987000DE98B6 /* RestaurantheaderCell.xib */,
+				4F94C5442372987000DE98B6 /* RestaurantUpcomingCell.swift */,
+				4F94C5452372987000DE98B6 /* RestaurantUpcomingCell.xib */,
+			);
+			path = "Tabel Cell";
+			sourceTree = "<group>";
+		};
+		4F94C5522372989500DE98B6 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5532372989500DE98B6 /* LoginVC.swift */,
+				4F94C5542372989500DE98B6 /* GoogleMapVC.swift */,
+				4F94C5552372989500DE98B6 /* SignUpVC.swift */,
+				4F94C5562372989500DE98B6 /* ChooseExperianceVC.swift */,
+				4F94C58A2372C94D00DE98B6 /* UserLocationVC.swift */,
+				4F94C5572372989500DE98B6 /* Prefernces */,
+				4F94C5612372989500DE98B6 /* MainVC.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
+		4F94C5572372989500DE98B6 /* Prefernces */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C5582372989500DE98B6 /* PreferencesVC.swift */,
+				4F94C5592372989500DE98B6 /* TabelCell */,
+				4F94C5602372989500DE98B6 /* ViewPreferencesDetailVC.swift */,
+			);
+			path = Prefernces;
+			sourceTree = "<group>";
+		};
+		4F94C5592372989500DE98B6 /* TabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C55A2372989500DE98B6 /* PreferencesSwitchTabelCell.swift */,
+				4F94C55B2372989500DE98B6 /* PreferencesTabelCell.swift */,
+				4F94C55C2372989500DE98B6 /* PreferencesTabelCell.xib */,
+				4F94C55D2372989500DE98B6 /* PreferencesSwitchTabelCell.xib */,
+				4F94C55E2372989500DE98B6 /* Model */,
+			);
+			path = TabelCell;
+			sourceTree = "<group>";
+		};
+		4F94C55E2372989500DE98B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4F94C55F2372989500DE98B6 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6AD8A3DB2276772500947D14 /* FriendsSelection */ = {
+		4F94C56E237298AB00DE98B6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6AD8A3D9227676DF00947D14 /* FriendsCollectionViewCell.swift */,
-				6AD8A3DC2276774A00947D14 /* FriendsSelectionViewController.swift */,
+				4F94C56F237298AB00DE98B6 /* SearchView.swift */,
+				4F94C570237298AB00DE98B6 /* BaseViewController.swift */,
+				4F94C571237298AB00DE98B6 /* myView.swift */,
+				4F94C572237298AB00DE98B6 /* TextFieldView.swift */,
+				4F94C573237298AB00DE98B6 /* CustomeSwitch.swift */,
+				4F94C574237298AB00DE98B6 /* AppConstant.swift */,
+				4F94C575237298AB00DE98B6 /* AppUtility.swift */,
+				4F94C576237298AB00DE98B6 /* Utility.swift */,
+				4F94C577237298AB00DE98B6 /* GradientView.swift */,
+				4F94C578237298AB00DE98B6 /* ButtonView.swift */,
+				4F94C579237298AB00DE98B6 /* labelview.swift */,
 			);
-			path = FriendsSelection;
+			path = View;
 			sourceTree = "<group>";
 		};
-		6AD8A3E22276892C00947D14 /* Parameters */ = {
+		4FF7558D23757496001CBE07 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6AD8A3E32276897E00947D14 /* ParametersViewController.swift */,
-				6AD8A3E622768AEB00947D14 /* PreferencesViewController.swift */,
+				4FF7558E237574D0001CBE07 /* Generatedexp.swift */,
 			);
-			path = Parameters;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		6AD8A3E5227689AB00947D14 /* MainScreen */ = {
+		7AE0EE2CFB4502EC42EE51D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6AC5E2BF22764BD8001210B8 /* MainScreenController.swift */,
-				6AD8A3D522766C6800947D14 /* popUpGroupSelection.swift */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		6AFA9C0E227E53D8001D977F /* Supporting FIles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Supporting FIles";
-			sourceTree = "<group>";
-		};
-		6AFE29DB22D0439900C34202 /* Pending & CheckIn */ = {
-			isa = PBXGroup;
-			children = (
-				6AFE29E222D045B100C34202 /* PendingTableViewController.swift */,
-			);
-			path = "Pending & CheckIn";
-			sourceTree = "<group>";
-		};
-		96FBCE03554C20A4AA10CE49 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1FBB531922F82A100010EC5C /* FBSDKLoginKit.framework */,
-				1FBB531722F82A0A0010EC5C /* FBSDKCoreKit.framework */,
-				E965DA1DEBFB9851642E2702 /* Pods_Ouro.framework */,
+				42EC7627E0FB7B9439A162D0 /* Pods_Ouro.framework */,
+				4FBBDDAE1B6EF7B4C1B002F5 /* Pods_OuroTests.framework */,
+				5CE989D566416A469676E3F8 /* Pods_OuroUITests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B42D4C95342368DE9F5B2480 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */,
-				FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AC5E2B922764BD8001210B8 /* Ouro */ = {
+		4F94C4E9237296D200DE98B6 /* Ouro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro" */;
+			buildConfigurationList = 4F94C514237296D300DE98B6 /* Build configuration list for PBXNativeTarget "Ouro" */;
 			buildPhases = (
-				939C98222DF4A8341FADEF6D /* [CP] Check Pods Manifest.lock */,
-				6AC5E2B622764BD8001210B8 /* Sources */,
-				6AC5E2B722764BD8001210B8 /* Frameworks */,
-				6AC5E2B822764BD8001210B8 /* Resources */,
-				620E2822EDAE8929B1DB7004 /* [CP] Copy Pods Resources */,
-				34E49B0AB2EFDD64CC0C7D19 /* [CP] Embed Pods Frameworks */,
+				ACBDB8B3C5F57696E6D39713 /* [CP] Check Pods Manifest.lock */,
+				4F94C4E6237296D200DE98B6 /* Sources */,
+				4F94C4E7237296D200DE98B6 /* Frameworks */,
+				4F94C4E8237296D200DE98B6 /* Resources */,
+				85253F325650A3AA575CA26C /* [CP] Embed Pods Frameworks */,
+				69E6F2BB9CDF774320A4A3E2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Ouro;
-			productName = "Ouro iOSApplication v1";
-			productReference = 6AC5E2BA22764BD8001210B8 /* Ouro.app */;
+			productName = Ouro;
+			productReference = 4F94C4EA237296D200DE98B6 /* Ouro.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4F94C4FF237296D300DE98B6 /* OuroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F94C517237296D300DE98B6 /* Build configuration list for PBXNativeTarget "OuroTests" */;
+			buildPhases = (
+				8711408FAFC963E3AB806E97 /* [CP] Check Pods Manifest.lock */,
+				4F94C4FC237296D300DE98B6 /* Sources */,
+				4F94C4FD237296D300DE98B6 /* Frameworks */,
+				4F94C4FE237296D300DE98B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F94C502237296D300DE98B6 /* PBXTargetDependency */,
+			);
+			name = OuroTests;
+			productName = OuroTests;
+			productReference = 4F94C500237296D300DE98B6 /* OuroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F94C50A237296D300DE98B6 /* OuroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F94C51A237296D300DE98B6 /* Build configuration list for PBXNativeTarget "OuroUITests" */;
+			buildPhases = (
+				BB795FC7945E69867EA95ED5 /* [CP] Check Pods Manifest.lock */,
+				4F94C507237296D300DE98B6 /* Sources */,
+				4F94C508237296D300DE98B6 /* Frameworks */,
+				4F94C509237296D300DE98B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F94C50D237296D300DE98B6 /* PBXTargetDependency */,
+			);
+			name = OuroUITests;
+			productName = OuroUITests;
+			productReference = 4F94C50B237296D300DE98B6 /* OuroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6AC5E2B222764BD8001210B8 /* Project object */ = {
+		4F94C4E2237296D200DE98B6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = Ouro;
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = PC;
 				TargetAttributes = {
-					6AC5E2B922764BD8001210B8 = {
-						CreatedOnToolsVersion = 10.2;
+					4F94C4E9237296D200DE98B6 = {
+						CreatedOnToolsVersion = 11.0;
+						LastSwiftMigration = 1100;
+					};
+					4F94C4FF237296D300DE98B6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 4F94C4E9237296D200DE98B6;
+					};
+					4F94C50A237296D300DE98B6 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 4F94C4E9237296D200DE98B6;
 					};
 				};
 			};
-			buildConfigurationList = 6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro" */;
+			buildConfigurationList = 4F94C4E5237296D200DE98B6 /* Build configuration list for PBXProject "Ouro" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -292,50 +512,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 6AC5E2B122764BD8001210B8;
-			productRefGroup = 6AC5E2BB22764BD8001210B8 /* Products */;
+			mainGroup = 4F94C4E1237296D200DE98B6;
+			productRefGroup = 4F94C4EB237296D200DE98B6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AC5E2B922764BD8001210B8 /* Ouro */,
+				4F94C4E9237296D200DE98B6 /* Ouro */,
+				4F94C4FF237296D300DE98B6 /* OuroTests */,
+				4F94C50A237296D300DE98B6 /* OuroUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6AC5E2B822764BD8001210B8 /* Resources */ = {
+		4F94C4E8237296D200DE98B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AC5E2CB22764BDA001210B8 /* LaunchScreen.storyboard in Resources */,
-				6AC5E2C822764BDA001210B8 /* Assets.xcassets in Resources */,
-				6AC5E2C322764BD8001210B8 /* Main.storyboard in Resources */,
-				6A30EF8D227E57AF00874830 /* GoogleService-Info.plist in Resources */,
-				1FDAC5D622FEA21400CD7DBB /* Restaurant.storyboard in Resources */,
+				4F94C54B2372987000DE98B6 /* RestaurantUpcomingCell.xib in Resources */,
+				4F94C54F2372987000DE98B6 /* RestaurantCell.xib in Resources */,
+				4F94C4FA237296D300DE98B6 /* LaunchScreen.storyboard in Resources */,
+				4F94C5692372989500DE98B6 /* PreferencesTabelCell.xib in Resources */,
+				4F94C4F7237296D300DE98B6 /* Assets.xcassets in Resources */,
+				4F94C54E2372987000DE98B6 /* RestaurantheaderCell.xib in Resources */,
+				4F94C4F5237296D200DE98B6 /* Main.storyboard in Resources */,
+				4FF7558C23756AA5001CBE07 /* GoogleService-Info.plist in Resources */,
+				4F94C53C2372980D00DE98B6 /* style.json in Resources */,
+				4F94C56A2372989500DE98B6 /* PreferencesSwitchTabelCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C4FE237296D300DE98B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C509237296D300DE98B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		34E49B0AB2EFDD64CC0C7D19 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		620E2822EDAE8929B1DB7004 /* [CP] Copy Pods Resources */ = {
+		69E6F2BB9CDF774320A4A3E2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,7 +576,46 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		939C98222DF4A8341FADEF6D /* [CP] Check Pods Manifest.lock */ = {
+		85253F325650A3AA575CA26C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ouro/Pods-Ouro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8711408FAFC963E3AB806E97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OuroTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACBDB8B3C5F57696E6D39713 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -374,49 +637,117 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		BB795FC7945E69867EA95ED5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OuroUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6AC5E2B622764BD8001210B8 /* Sources */ = {
+		4F94C4E6237296D200DE98B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AD8A3DD2276774A00947D14 /* FriendsSelectionViewController.swift in Sources */,
-				1FD4743B2302C3030016DD84 /* UpcomingTableViewCell.swift in Sources */,
-				6AFE29E322D045B100C34202 /* PendingTableViewController.swift in Sources */,
-				6A595B97227BB80D004BD03C /* GenerateViewController.swift in Sources */,
-				6AC5E2C622764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld in Sources */,
-				6AFE29DF22D0446300C34202 /* ResultsViewController.swift in Sources */,
-				1FDAC5D922FEA6A900CD7DBB /* RestaurantListSegmnetPagerVC.swift in Sources */,
-				1FDAC5DD22FEA6F000CD7DBB /* UpcomingListVC.swift in Sources */,
-				6A595B9C227BB8C7004BD03C /* RegistrationViewController.swift in Sources */,
-				6AC5E2C022764BD8001210B8 /* MainScreenController.swift in Sources */,
-				1FDAC5DB22FEA6DC00CD7DBB /* HistoryListVC.swift in Sources */,
-				1FD474392302AFD10016DD84 /* HistroryTableViewCell.swift in Sources */,
-				6AD8A3E722768AEB00947D14 /* PreferencesViewController.swift in Sources */,
-				6AC5E2BE22764BD8001210B8 /* AppDelegate.swift in Sources */,
-				6AD8A3DA227676DF00947D14 /* FriendsCollectionViewCell.swift in Sources */,
-				6AD8A3E42276897E00947D14 /* ParametersViewController.swift in Sources */,
-				6A595B9A227BB8B8004BD03C /* LoginViewController.swift in Sources */,
-				6AD8A3D622766C6800947D14 /* popUpGroupSelection.swift in Sources */,
+				4F94C5352372972600DE98B6 /* GFBase32Utils.m in Sources */,
+				4F94C5652372989500DE98B6 /* ChooseExperianceVC.swift in Sources */,
+				4F94C583237298AB00DE98B6 /* ButtonView.swift in Sources */,
+				4F94C5662372989500DE98B6 /* PreferencesVC.swift in Sources */,
+				4F94C57E237298AB00DE98B6 /* CustomeSwitch.swift in Sources */,
+				4F94C5392372972600DE98B6 /* GFGeoHash.m in Sources */,
+				4F94C4EE237296D200DE98B6 /* AppDelegate.swift in Sources */,
+				4F94C57B237298AB00DE98B6 /* BaseViewController.swift in Sources */,
+				4F94C580237298AB00DE98B6 /* AppUtility.swift in Sources */,
+				4F94C5632372989500DE98B6 /* GoogleMapVC.swift in Sources */,
+				4FF7558F237574D0001CBE07 /* Generatedexp.swift in Sources */,
+				4F94C5362372972600DE98B6 /* GeoFire.m in Sources */,
+				4F94C54A2372987000DE98B6 /* RestaurantUpcomingCell.swift in Sources */,
+				4F94C58B2372C94D00DE98B6 /* UserLocationVC.swift in Sources */,
+				4F94C56C2372989500DE98B6 /* ViewPreferencesDetailVC.swift in Sources */,
+				4F94C5402372983D00DE98B6 /* GenerateExperianceVC.swift in Sources */,
+				4F94C5672372989500DE98B6 /* PreferencesSwitchTabelCell.swift in Sources */,
+				4F94C54C2372987000DE98B6 /* RestaurantheaderCell.swift in Sources */,
+				4F94C57A237298AB00DE98B6 /* SearchView.swift in Sources */,
+				4F94C5512372988100DE98B6 /* RestaurantFoodOrderVC.swift in Sources */,
+				4F94C57D237298AB00DE98B6 /* TextFieldView.swift in Sources */,
+				4F94C5622372989500DE98B6 /* LoginVC.swift in Sources */,
+				4F94C584237298AB00DE98B6 /* labelview.swift in Sources */,
+				4F94C582237298AB00DE98B6 /* GradientView.swift in Sources */,
+				4F94C581237298AB00DE98B6 /* Utility.swift in Sources */,
+				4F94C56D2372989500DE98B6 /* MainVC.swift in Sources */,
+				4F94C5682372989500DE98B6 /* PreferencesTabelCell.swift in Sources */,
+				4F94C54D2372987000DE98B6 /* RestaurantCell.swift in Sources */,
+				4F94C5372372972600DE98B6 /* GFGeoHashQuery.m in Sources */,
+				4F94C57F237298AB00DE98B6 /* AppConstant.swift in Sources */,
+				4F94C5642372989500DE98B6 /* SignUpVC.swift in Sources */,
+				4F94C586237298F700DE98B6 /* SceneDelegate.swift in Sources */,
+				4F94C56B2372989500DE98B6 /* UserModel.swift in Sources */,
+				4F94C57C237298AB00DE98B6 /* myView.swift in Sources */,
+				4F94C5382372972600DE98B6 /* GFQuery.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C4FC237296D300DE98B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94C505237296D300DE98B6 /* OuroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F94C507237296D300DE98B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F94C510237296D300DE98B6 /* OuroUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		4F94C502237296D300DE98B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F94C4E9237296D200DE98B6 /* Ouro */;
+			targetProxy = 4F94C501237296D300DE98B6 /* PBXContainerItemProxy */;
+		};
+		4F94C50D237296D300DE98B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F94C4E9237296D200DE98B6 /* Ouro */;
+			targetProxy = 4F94C50C237296D300DE98B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		6AC5E2C122764BD8001210B8 /* Main.storyboard */ = {
+		4F94C4F3237296D200DE98B6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6AC5E2C222764BD8001210B8 /* Base */,
+				4F94C4F4237296D200DE98B6 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6AC5E2C922764BDA001210B8 /* LaunchScreen.storyboard */ = {
+		4F94C4F8237296D300DE98B6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6AC5E2CA22764BDA001210B8 /* Base */,
+				4F94C4F9237296D300DE98B6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -424,7 +755,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6AC5E2CD22764BDA001210B8 /* Debug */ = {
+		4F94C512237296D300DE98B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -456,7 +787,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -475,18 +805,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		6AC5E2CE22764BDA001210B8 /* Release */ = {
+		4F94C513237296D300DE98B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -518,7 +847,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -531,10 +859,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -542,83 +869,175 @@
 			};
 			name = Release;
 		};
-		6AC5E2D022764BDA001210B8 /* Debug */ = {
+		4F94C515237296D300DE98B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26EBE3AD624F7D9D25E6668C /* Pods-Ouro.debug.xcconfig */;
+			baseConfigurationReference = 386B82CF7E7361B43C6765FD /* Pods-Ouro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 8RLPUVRB9E;
-				INFOPLIST_FILE = Ouro/Model/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C29N3TKVPW;
+				INFOPLIST_FILE = Ouro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ouro.Developmentv1;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.Ouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "WildCard Dev";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "Ouro/GeoFire/Ouro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6AC5E2D122764BDA001210B8 /* Release */ = {
+		4F94C516237296D300DE98B6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FE09E1449AD2BECE6FEE100D /* Pods-Ouro.release.xcconfig */;
+			baseConfigurationReference = 79FC7200834BB1980D4C5D60 /* Pods-Ouro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = Ouro/Model/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C29N3TKVPW;
+				INFOPLIST_FILE = Ouro/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Ouro.Developmentv1;
+				PRODUCT_BUNDLE_IDENTIFIER = developer.Ouro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_OBJC_BRIDGING_HEADER = "Ouro/GeoFire/Ouro-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F94C518237296D300DE98B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8B8C666552E265320867C2 /* Pods-OuroTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OuroTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.OuroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ouro.app/Ouro";
+			};
+			name = Debug;
+		};
+		4F94C519237296D300DE98B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D144ADCE74641E856E9C9B8 /* Pods-OuroTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OuroTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.OuroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ouro.app/Ouro";
+			};
+			name = Release;
+		};
+		4F94C51B237296D300DE98B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86046E7BAA52072A4B16956D /* Pods-OuroUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OuroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.OuroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ouro;
+			};
+			name = Debug;
+		};
+		4F94C51C237296D300DE98B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2AD8A631903FFD0334CA90 /* Pods-OuroUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OuroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = developer.OuroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Ouro;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AC5E2B522764BD8001210B8 /* Build configuration list for PBXProject "Ouro" */ = {
+		4F94C4E5237296D200DE98B6 /* Build configuration list for PBXProject "Ouro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AC5E2CD22764BDA001210B8 /* Debug */,
-				6AC5E2CE22764BDA001210B8 /* Release */,
+				4F94C512237296D300DE98B6 /* Debug */,
+				4F94C513237296D300DE98B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AC5E2CF22764BDA001210B8 /* Build configuration list for PBXNativeTarget "Ouro" */ = {
+		4F94C514237296D300DE98B6 /* Build configuration list for PBXNativeTarget "Ouro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6AC5E2D022764BDA001210B8 /* Debug */,
-				6AC5E2D122764BDA001210B8 /* Release */,
+				4F94C515237296D300DE98B6 /* Debug */,
+				4F94C516237296D300DE98B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F94C517237296D300DE98B6 /* Build configuration list for PBXNativeTarget "OuroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94C518237296D300DE98B6 /* Debug */,
+				4F94C519237296D300DE98B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F94C51A237296D300DE98B6 /* Build configuration list for PBXNativeTarget "OuroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F94C51B237296D300DE98B6 /* Debug */,
+				4F94C51C237296D300DE98B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		6AC5E2C422764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				6AC5E2C522764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodel */,
-			);
-			currentVersion = 6AC5E2C522764BD8001210B8 /* Ouro_iOSApplication_v1.xcdatamodel */;
-			path = Ouro_iOSApplication_v1.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
-	rootObject = 6AC5E2B222764BD8001210B8 /* Project object */;
+	rootObject = 4F94C4E2237296D200DE98B6 /* Project object */;
 }

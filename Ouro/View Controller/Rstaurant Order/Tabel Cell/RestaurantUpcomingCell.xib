@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="246" id="KGk-i7-Jjw" customClass="RestaurantUpcomingCell" customModule="Ouro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="372" height="246"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="372" height="246"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QW7-iy-Kfs">
+                        <rect key="frame" x="0.0" y="0.0" width="372" height="246"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPE-Yi-zd1">
+                                <rect key="frame" x="0.0" y="0.0" width="372" height="246"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle 2 Copy 2" translatesAutoresizingMaskIntoConstraints="NO" id="1XG-1l-uY3">
+                                        <rect key="frame" x="0.0" y="0.0" width="372" height="246"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBc-b1-9iZ">
+                                        <rect key="frame" x="278" y="195" width="74" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="74" id="IyE-e0-on1"/>
+                                        </constraints>
+                                        <state key="normal" title="Apr 13th">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svn-X9-dsQ">
+                                        <rect key="frame" x="20" y="195" width="124" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="2Mz-uE-3e4"/>
+                                            <constraint firstAttribute="width" constant="124" id="cn1-oU-lYS"/>
+                                        </constraints>
+                                        <state key="normal" title="Patria Bar &amp; Grill">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="svn-X9-dsQ" firstAttribute="height" secondItem="nBc-b1-9iZ" secondAttribute="height" id="IvM-X4-uDK"/>
+                                    <constraint firstItem="nBc-b1-9iZ" firstAttribute="centerY" secondItem="svn-X9-dsQ" secondAttribute="centerY" id="LlZ-cs-dC0"/>
+                                    <constraint firstItem="svn-X9-dsQ" firstAttribute="baseline" secondItem="nBc-b1-9iZ" secondAttribute="baseline" id="MPK-1O-H6f"/>
+                                    <constraint firstItem="svn-X9-dsQ" firstAttribute="leading" secondItem="EPE-Yi-zd1" secondAttribute="leading" constant="20" id="OYE-gz-nJi"/>
+                                    <constraint firstAttribute="bottom" secondItem="svn-X9-dsQ" secondAttribute="bottom" constant="16" id="Xax-M5-hu0"/>
+                                    <constraint firstAttribute="trailing" secondItem="nBc-b1-9iZ" secondAttribute="trailing" constant="20" id="a58-CQ-HSH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="spp-PA-oOw">
+                                <rect key="frame" x="0.0" y="245" width="372" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="62B-P6-wg1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="spp-PA-oOw" firstAttribute="leading" secondItem="QW7-iy-Kfs" secondAttribute="leading" id="8Ce-65-GKl"/>
+                            <constraint firstAttribute="trailing" secondItem="spp-PA-oOw" secondAttribute="trailing" id="P1Q-3N-XQ4"/>
+                            <constraint firstAttribute="trailing" secondItem="EPE-Yi-zd1" secondAttribute="trailing" id="PUS-HQ-Whi"/>
+                            <constraint firstItem="EPE-Yi-zd1" firstAttribute="bottom" secondItem="spp-PA-oOw" secondAttribute="bottom" id="W9y-Us-eyB"/>
+                            <constraint firstAttribute="bottom" secondItem="spp-PA-oOw" secondAttribute="bottom" id="Zmy-hy-e6a"/>
+                            <constraint firstItem="EPE-Yi-zd1" firstAttribute="top" secondItem="QW7-iy-Kfs" secondAttribute="top" id="nQm-4q-6IH"/>
+                            <constraint firstItem="EPE-Yi-zd1" firstAttribute="leading" secondItem="QW7-iy-Kfs" secondAttribute="leading" id="nko-Fa-eCs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="QW7-iy-Kfs" secondAttribute="trailing" id="ciM-2T-VxS"/>
+                    <constraint firstItem="QW7-iy-Kfs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e5Y-6J-YtO"/>
+                    <constraint firstItem="QW7-iy-Kfs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="iRa-hF-hHV"/>
+                    <constraint firstAttribute="bottom" secondItem="QW7-iy-Kfs" secondAttribute="bottom" id="j6S-06-frc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="btnRestaurantName" destination="svn-X9-dsQ" id="oUp-Km-yvH"/>
+                <outlet property="btndate" destination="nBc-b1-9iZ" id="8RT-aR-pip"/>
+                <outlet property="imgRestaurant" destination="1XG-1l-uY3" id="xW0-Yc-rP3"/>
+            </connections>
+            <point key="canvasLocation" x="166.40000000000001" y="219.49025487256372"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Rectangle 2 Copy 2" width="348" height="217"/>
+    </resources>
+</document>

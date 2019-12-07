@@ -1,0 +1,6 @@
+framework module Pods_Ouro {
+  umbrella header "Pods-Ouro-umbrella.h"
+
+  export *
+  module * { export * }
+}

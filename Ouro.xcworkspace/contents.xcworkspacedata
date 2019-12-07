@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Building.gpx">
-   </FileRef>
-   <FileRef
-      location = "group:Building.gpx">
-   </FileRef>
-   <FileRef
       location = "group:Ouro.xcodeproj">
    </FileRef>
    <FileRef
