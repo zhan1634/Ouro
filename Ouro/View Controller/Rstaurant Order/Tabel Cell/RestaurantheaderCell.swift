@@ -10,6 +10,9 @@ import UIKit
 
 class RestaurantheaderCell: UITableViewCell {
 
+    @IBOutlet weak var lblCheckIn: UILabel!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     var flag:Int = 0
     override func awakeFromNib() {
@@ -20,5 +23,6 @@ class RestaurantheaderCell: UITableViewCell {
         segmentedControl.setTitleTextAttributes(titleTextAttributes1, for: .normal)
         segmentedControl.setTitleTextAttributes(titleTextAttributes, for: .selected)
     }
+   
     
 }

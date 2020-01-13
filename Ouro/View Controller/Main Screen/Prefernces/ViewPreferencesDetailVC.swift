@@ -24,13 +24,13 @@ class ViewPreferencesDetailVC: BaseViewController {
     
     var resultDictGenerated = [String:Any]()
     var ref = Database.database().reference()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print(resultDictGenerated)
         Name.text = resultDictGenerated["Name"] as? String
         Address.text = resultDictGenerated["Address"] as? String
-        Price.setTitle(resultDictGenerated["Price"] as? String, for: .normal)
+       // Price.setTitle(resultDictGenerated["Price"] as? String, for: .normal)
 //        Cuisine.text = "Italian"
 //        Date.text = "April 13"
         
@@ -45,11 +45,18 @@ class ViewPreferencesDetailVC: BaseViewController {
         setupnavigation()
         SetImageCornerRadius(imgrestaurant, radius: 20.0)
     }
+    @IBAction func btnVetoClick(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+
+    }
     
     func setupnavigation()
-       {
-           SetNavigationTitle(Navname: "OURO")
-           setLeftMenubtn(img: "Menu Icon")
-           setRightMenubtn(img: "Check In")
-       }
+    {
+        SetNavigationTitle(Navname: "OURO")
+//           setLeftMenubtn(img: "Menu Icon")
+        setLeftClose(img: "Back Chevron")
+        
+
+        setRightMenubtn(img: "Check In")
+    }
 }

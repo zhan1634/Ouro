@@ -46,6 +46,7 @@ class SignUpVC: BaseViewController {
        Auth.auth().createUser(withEmail: txtEmailAddress.text!, password: txtPassWord.text!) {
             (user, error) in
             if error != nil {
+                 self.removeSpinner()
                 print(error?.localizedDescription)
                 self.shakeview()
                 self.errorlabel()
@@ -66,6 +67,7 @@ class SignUpVC: BaseViewController {
                     let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
                     let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                     navigationController.navigationBar.isHidden = true
+                    navigationController.modalPresentationStyle = .fullScreen
                     self.present(navigationController, animated: true, completion: nil)
                 }
             }

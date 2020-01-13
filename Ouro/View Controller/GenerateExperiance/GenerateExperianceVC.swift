@@ -25,7 +25,7 @@ class GenerateExperianceVC: UIViewController {
     var selectArray = [[String:Any]]()
     var setLocation = CLLocation()
     var tempC = Int()
-    
+    var isFromView : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -34,7 +34,17 @@ class GenerateExperianceVC: UIViewController {
             self.runResult()
         })
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        if isFromView {
+            print("generate experiance view will appear")
+            let generateexpNav = GoogleMapVC.instantiate(fromAppStoryboard: .Main)
+            self.addChild(generateexpNav)
+            generateexpNav.view.frame = self.view.frame
+            self.view.addSubview(generateexpNav.view)
+            generateexpNav.didMove(toParent: self)
+            
+        }
+    }
     func runSearch() {
         let center = setLocation
         var radius = UserDefaults.standard.double(forKey: "SearchDistance")
@@ -59,6 +69,7 @@ class GenerateExperianceVC: UIViewController {
     
     func runResult() {
         removeFromParent()
+        isFromView = true
         let Generateexpdetailnav = ViewPreferencesDetailVC.instantiate(fromAppStoryboard: .Main)
         Generateexpdetailnav.resultDictGenerated = self.resultDict
         if #available(iOS 13.0, *) {
@@ -67,11 +78,12 @@ class GenerateExperianceVC: UIViewController {
         } else {
             // Fallback on earlier versions
         }
+        
         Generateexpdetailnav.modalPresentationStyle = .overFullScreen
         let navigationController = UINavigationController(rootViewController: Generateexpdetailnav)
         navigationController.navigationBar.barTintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
-        
     }
     
     func runResults(keyArray: Array<String>, completion: @escaping (Array<NSDictionary>) -> ()) {

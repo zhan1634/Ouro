@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     var vSpinner : UIView?
+    var isFromRestaurantFoodOrderVC : Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,10 +33,39 @@ class BaseViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = leftBarBackItem
     }
     
+    
     @objc func btncloseClicked()
     {
         self.dismiss(animated: true, completion: nil)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
+            self.removeFromParent() // Code you want to be delayed
+        }
+        
+//        let navigationController = self.presentingViewController as? UINavigationController
+//
+//           self.dismiss(animated: true) {
+//             let _ = navigationController?.popToRootViewController(animated: true)
+//           }
     }
+       func setRemoveChild(img:String) {
+            var leftBarBackItem = UIBarButtonItem()
+            leftBarBackItem = UIBarButtonItem(image:#imageLiteral(resourceName: img), style: UIBarButtonItem.Style.plain, target: self, action: #selector(btnRemoveChild))
+            leftBarBackItem.tintColor = UIColor.white
+            self.navigationItem.leftBarButtonItem = leftBarBackItem
+        }
+        
+        
+        @objc func btnRemoveChild()
+        {
+            removeFromParent()
+//            self.dismiss(animated: true, completion: nil)
+    //        let navigationController = self.presentingViewController as? UINavigationController
+    //
+    //           self.dismiss(animated: true) {
+    //             let _ = navigationController?.popToRootViewController(animated: true)
+    //           }
+        }
     
     @objc func btnBackClicked()
     {
@@ -58,11 +88,22 @@ class BaseViewController: UIViewController {
         RightBarBackItem.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = RightBarBackItem
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        print("base view view will appear")
+        if isFromRestaurantFoodOrderVC {
+            self.navigationController?.navigationBar.isHidden = false
+            SetNavigationTitle(Navname: "OURO")
+//            setLeftMenubtn(img: "Menu Icon")
+            setLeftClose(img: "Back Chevron")
+            setRightMenubtn(img: "Check In")
+        }
+    }
     @objc func setRightMenuClick()  {
+        isFromRestaurantFoodOrderVC = true
         let Generatednav = self.storyboard?.instantiateViewController(identifier: "RestaurantFoodOrderVC") as! RestaurantFoodOrderVC
         self.navigationController?.pushViewController(Generatednav, animated: true)
     }
+    
     
     //MARK:  Set navigationbar shadow
     func SetupNavigatiionshadow()

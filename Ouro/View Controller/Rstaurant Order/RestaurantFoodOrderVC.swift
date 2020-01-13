@@ -19,8 +19,9 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
     var ref = Database.database().reference()
     var arrpending = [Generatemodel]()
     var pendingDict : Generatemodel?
-    var segment:Int = 0
-    
+    var segment:Int = 1
+    var firstName : String = String()
+    var lastName : String = String()
     override func viewDidLoad() {
         super.viewDidLoad()
         SetUptableView()
@@ -28,15 +29,15 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
         self.navigationController?.navigationBar.isHidden = true
         self.tblRestaurantOrder.reloadData()
         let cell = tblRestaurantOrder.cellForRow(at: IndexPath(row: 0, section: 0)) as? RestaurantheaderCell
-         
     }
     func Savedatabasedata()
     {
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
+            
                 print("UserID : \(user.uid)")
                 self.ref.child("Pending").child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
-                    print("Snapshot: \(snapshot.hasChildren())")
+                    print("Snapshot ResturantFoodOrderVC: \(snapshot.hasChildren())")
                     print(snapshot)
                     for item in snapshot.children {
                         let child = item as! DataSnapshot
@@ -49,6 +50,8 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
                         self.arrpending.append(self.pendingDict!)
                     }
                     print(self.arrpending)
+                    self.tblRestaurantOrder.reloadData()
+                    
                 })
                 
             }
@@ -102,8 +105,18 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantheaderCell") as! RestaurantheaderCell
            // let segmentControl = cell.viewWithTag(1) as! UISegmentedControl
+            if let userDict = AppUtility.GetLoginUserData() {
+                if let fname = userDict.fname.isEmpty ? "Guest": userDict.fname , let lname = userDict.lname.isEmpty ? "" : userDict.lname {
+                        cell.lblUserName.text = fname + " " + lname
+                }
+            }
+            else {
+                cell.lblUserName.text = "Guest"
+            }
+            cell.lblCheckIn.text = "\(arrpending.count == 0 ? 0 : arrpending.count)" + " Check - in"
             cell.segmentedControl.selectedSegmentIndex = segment
             cell.segmentedControl.addTarget(self, action: #selector(self.handleSegmentControlClick(_:)), for: .valueChanged)
+            cell.btnBack.addTarget(self, action: #selector(btnBackAction), for: .touchUpInside)
             return cell
         }
        else
@@ -127,13 +140,19 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
         }
        
     }
-    
+    @objc func btnBackAction()
+       {
+//           self.dismiss(animated: true, completion: nil)
+//        isFromRestaurantFoodOrderVC = true
+           self.navigationController?.popViewController(animated: true)
+       }
+       
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         var height:CGFloat = 0.0
         
         if indexPath.section == 0
         {
-            height = 230.0
+            height = 200.0//230.0
         }
         else
         {

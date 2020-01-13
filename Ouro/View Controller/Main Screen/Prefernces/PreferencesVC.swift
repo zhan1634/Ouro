@@ -24,7 +24,7 @@ class PreferencesVC: BaseViewController {
     @IBOutlet weak var tblprefernces: UITableView!
     
     //MARK:- Variables
-    var arrPreferences = [Prefernces]()
+        var arrPreferences = [Prefernces]()
     var travelDistance:Int = 5
     var pricerange: String? = "$"
     var isVagetarian: String = "False"

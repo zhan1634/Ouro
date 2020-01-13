@@ -20,20 +20,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc5-gp-MOs">
                         <rect key="frame" x="0.0" y="0.0" width="445" height="234"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Menu Icon" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-dc-uSp">
-                                <rect key="frame" x="30" y="30" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ieO-n9-UIf"/>
-                                    <constraint firstAttribute="width" constant="30" id="iuW-gp-20j"/>
-                                </constraints>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo Symbol" translatesAutoresizingMaskIntoConstraints="NO" id="TdU-EB-gMu">
                                 <rect key="frame" x="178" y="25" width="89" height="89"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="TdU-EB-gMu" secondAttribute="height" id="FSd-gS-5wF"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maria Walker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFd-TM-aBy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFd-TM-aBy">
                                 <rect key="frame" x="96.666666666666671" y="129" width="251.66666666666663" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +38,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="grL-RE-HzG">
+                            <segmentedControl hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="grL-RE-HzG">
                                 <rect key="frame" x="30" y="186" width="385" height="29"/>
                                 <color key="backgroundColor" name="Button Color"/>
                                 <segments>
@@ -53,13 +46,21 @@
                                     <segment title="History"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-Mz-FFH">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-Mz-FFH">
                                 <rect key="frame" x="385" y="30" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="5eJ-eD-Mbh"/>
                                     <constraint firstAttribute="height" constant="30" id="zP9-St-DoY"/>
                                 </constraints>
                                 <state key="normal" image="Check In"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hb0-2F-aKx">
+                                <rect key="frame" x="30" y="30" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Hb0-2F-aKx" secondAttribute="height" multiplier="1:1" id="3KN-4L-RKy"/>
+                                    <constraint firstAttribute="height" constant="30" id="lml-xe-g7h"/>
+                                </constraints>
+                                <state key="normal" image="Back Chevron"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="Background Color"/>
@@ -69,17 +70,17 @@
                             <constraint firstItem="ysq-VS-Bjk" firstAttribute="centerX" secondItem="Oc5-gp-MOs" secondAttribute="centerX" id="61q-GA-dBT"/>
                             <constraint firstItem="grL-RE-HzG" firstAttribute="centerX" secondItem="Oc5-gp-MOs" secondAttribute="centerX" id="6zM-zy-aJw"/>
                             <constraint firstAttribute="trailing" secondItem="Ugl-Mz-FFH" secondAttribute="trailing" constant="30" id="BO3-2V-ezf"/>
+                            <constraint firstItem="Hb0-2F-aKx" firstAttribute="leading" secondItem="Oc5-gp-MOs" secondAttribute="leading" constant="30" id="JWB-2p-mHu"/>
+                            <constraint firstItem="Hb0-2F-aKx" firstAttribute="top" secondItem="Oc5-gp-MOs" secondAttribute="top" constant="30" id="K5I-ey-GkW"/>
                             <constraint firstItem="grL-RE-HzG" firstAttribute="height" secondItem="Oc5-gp-MOs" secondAttribute="height" multiplier="0.12" id="Nvo-a4-D4O"/>
                             <constraint firstItem="ysq-VS-Bjk" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.7" constant="-60" id="RqF-mo-Nfq"/>
                             <constraint firstItem="rFd-TM-aBy" firstAttribute="centerX" secondItem="Oc5-gp-MOs" secondAttribute="centerX" id="S6i-j9-H2D"/>
                             <constraint firstItem="TdU-EB-gMu" firstAttribute="top" secondItem="Oc5-gp-MOs" secondAttribute="top" constant="25" id="Xk1-g9-pzM"/>
-                            <constraint firstItem="vfh-dc-uSp" firstAttribute="top" secondItem="Oc5-gp-MOs" secondAttribute="top" constant="30" id="Yvq-5e-zQV"/>
                             <constraint firstItem="TdU-EB-gMu" firstAttribute="centerX" secondItem="Oc5-gp-MOs" secondAttribute="centerX" id="b7e-HO-Xc0"/>
                             <constraint firstItem="grL-RE-HzG" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" constant="-60" id="cej-Jz-wBJ"/>
                             <constraint firstItem="TdU-EB-gMu" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.2" id="dwy-h9-5fM"/>
                             <constraint firstItem="rFd-TM-aBy" firstAttribute="top" secondItem="TdU-EB-gMu" secondAttribute="bottom" constant="15" id="hqo-tC-IMh"/>
                             <constraint firstItem="ysq-VS-Bjk" firstAttribute="top" secondItem="rFd-TM-aBy" secondAttribute="bottom" id="jms-0h-lnK"/>
-                            <constraint firstItem="vfh-dc-uSp" firstAttribute="leading" secondItem="Oc5-gp-MOs" secondAttribute="leading" constant="30" id="qR9-wq-3iO"/>
                             <constraint firstItem="rFd-TM-aBy" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.7" constant="-60" id="zm9-BZ-XDe"/>
                         </constraints>
                     </view>
@@ -93,15 +94,18 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="btnBack" destination="Hb0-2F-aKx" id="ivr-SA-arp"/>
+                <outlet property="lblCheckIn" destination="ysq-VS-Bjk" id="r0N-VJ-hfo"/>
+                <outlet property="lblUserName" destination="rFd-TM-aBy" id="loU-I4-45M"/>
                 <outlet property="segmentedControl" destination="grL-RE-HzG" id="tng-we-rlJ"/>
             </connections>
             <point key="canvasLocation" x="-105.07246376811595" y="124.55357142857142"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Back Chevron" width="11" height="17"/>
         <image name="Check In" width="27" height="32"/>
         <image name="Logo Symbol" width="144" height="139"/>
-        <image name="Menu Icon" width="24" height="17"/>
         <namedColor name="Background Color">
             <color red="0.0" green="0.0" blue="0.0" alpha="0.98000001907348633" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

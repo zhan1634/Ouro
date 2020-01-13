@@ -29,9 +29,15 @@ class LoginVC: BaseViewController {
         SetUptextField()
         setupnavigation()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        print("willappear")
+        SetUptextField()
+    }
+ 
     func SetUptextField()
     {
+        txtEmail.text = ""
+        txtPassword.text = ""
         setTextfieldAsSelected(txtEmail, strText: "Email")
         setTextfieldAsSelected(txtPassword, strText: "Password")
     }
@@ -50,6 +56,7 @@ class LoginVC: BaseViewController {
         self.showSpinner(onView: self.view)
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error, user == nil {
+                self.removeSpinner()
                 print(error.localizedDescription)
             }
             else
@@ -73,12 +80,11 @@ class LoginVC: BaseViewController {
                             let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
                             let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                             navigationController.navigationBar.isHidden = true
+                            navigationController.modalPresentationStyle = .fullScreen
                             self.present(navigationController, animated: true, completion: nil)
                         }
-                        
                     }
                 })
-                
             }
         }
     }
@@ -118,12 +124,11 @@ class LoginVC: BaseViewController {
                         let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
                         let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                         navigationController.navigationBar.isHidden = true
+                        navigationController.modalPresentationStyle = .fullScreen
                         self.present(navigationController, animated: true, completion: nil)
                         }
-                       
                     }
                 }
-                
             }
         }
     }

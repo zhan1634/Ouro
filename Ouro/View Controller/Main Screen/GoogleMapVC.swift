@@ -38,7 +38,8 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
     var searchLat = Double()
     var searchLong = Double()
     var setLocationPreferences = CLLocation()
-    
+    var isFromGenerated : Bool = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
         GMSServices.provideAPIKey("AIzaSyALizHyvUmnpjNuiwqRfyUStlP9ZLbcxn4")
@@ -104,7 +105,7 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
         self.mapView.animate(to: camera)
         if location.horizontalAccuracy > 0 {
             locationManager.stopUpdatingLocation()
-        setLocationPreferences = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            setLocationPreferences = CLLocation(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
          
         }
         
@@ -118,11 +119,17 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
     //
     
     @IBAction func btnBack(_ sender: Any) {
-        self.navigationController?.isNavigationBarHidden = false
+//        self.navigationController?.isNavigationBarHidden = false
+//        let chooseExperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
+//        self.addChild(chooseExperianceNav)
+//        chooseExperianceNav.view.frame = self.view.frame
+////        self.view.addSubview(chooseExperianceNav.view)
+//        chooseExperianceNav.didMove(toParent: self)
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func btnGenerate(_ sender: Any) {
+        isFromGenerated = true
         let generateexpNav = GenerateExperianceVC.instantiate(fromAppStoryboard: .Main)
         print(setLocationPreferences)
         generateexpNav.setLocation = self.setLocationPreferences
@@ -130,12 +137,22 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
         generateexpNav.view.frame = self.view.frame
         self.view.addSubview(generateexpNav.view)
         generateexpNav.didMove(toParent: self)
+        
     }
-    
+    @IBAction func btnLocationClick(_ sender: UIButton)  {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+
+        }
+    }
+
     @IBAction func btnpreferences(_ sender: Any) {
         let Preferencesnav = PreferencesVC.instantiate(fromAppStoryboard: .Main)
          let navigationController = UINavigationController(rootViewController: Preferencesnav)
          navigationController.navigationBar.isHidden = true
+        navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
     

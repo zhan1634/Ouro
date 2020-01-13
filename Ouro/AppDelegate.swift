@@ -13,17 +13,38 @@ import IQKeyboardManagerSwift
 import FBSDKCoreKit
 import FBSDKLoginKit
 import FBSDKShareKit
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        self.window = UIWindow(frame:UIScreen.main.bounds)
+        let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
+
+        if (UserDefaults.standard.value(forKey: "Userdata") as? Data) != nil {
+            //YES Already Login
+            let viewController = storyboard.instantiateViewController(withIdentifier: "ChooseExperianceVC") as! ChooseExperianceVC
+            let navigationController = UINavigationController.init(rootViewController: viewController)
+            self.window?.rootViewController = navigationController
+
+            
+        } else {
+            //NOT Login
+            let viewController = storyboard.instantiateViewController(withIdentifier: "MainVC") as! MainVC
+            let navigationController = UINavigationController.init(rootViewController: viewController)
+            self.window?.rootViewController = navigationController
+
+
+        }
+        self.window?.makeKeyAndVisible()
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         IQKeyboardManager.shared.enable = true
         GMSServices.provideAPIKey("AIzaSyALizHyvUmnpjNuiwqRfyUStlP9ZLbcxn4")
         FirebaseApp.configure()
+        
+        
         return true
     }
     
@@ -43,7 +64,9 @@ func application(_ application: UIApplication, configurationForConnecting connec
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.activateApp()
+    }
 
 }
 

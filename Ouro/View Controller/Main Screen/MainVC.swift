@@ -18,7 +18,7 @@ class MainVC: BaseViewController {
     func setupnavigation()
     {
         SetNavigationTitle(Navname: "OURO")
-        setLeftMenubtn(img: "Menu Icon")
+        //setLeftMenubtn(img: "Menu Icon")
         setRightMenubtn(img: "Check In")
     }
     
@@ -26,6 +26,7 @@ class MainVC: BaseViewController {
         let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
          let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
          navigationController.navigationBar.isHidden = true
+        navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
     
