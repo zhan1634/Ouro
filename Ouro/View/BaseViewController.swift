@@ -38,9 +38,9 @@ class BaseViewController: UIViewController {
     {
         self.dismiss(animated: true, completion: nil)
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
-            self.removeFromParent() // Code you want to be delayed
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) { // Change `2.0` to the desired number of seconds.
+//            self.removeFromParent() // Code you want to be delayed
+//        }
         
 //        let navigationController = self.presentingViewController as? UINavigationController
 //
@@ -127,6 +127,7 @@ class BaseViewController: UIViewController {
         lbltext.text = Navname
         lbltext.textColor = UIColor.white
         lbltext.font = UIFont.boldSystemFont(ofSize: 20.0)
+        self.navigationController?.navigationBar.backgroundColor = .black
         self.navigationItem.titleView = lbltext
     }
     
@@ -148,7 +149,6 @@ class BaseViewController: UIViewController {
             .font: UIFont.boldSystemFont(ofSize: 15.0)
         ])
     }
-    
     
     //MARK:  Set the loder
     func showSpinner(onView : UIView) {

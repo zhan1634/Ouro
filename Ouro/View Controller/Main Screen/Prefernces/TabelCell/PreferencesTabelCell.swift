@@ -16,6 +16,7 @@ class PreferencesTabelCell: UITableViewCell {
     @IBOutlet weak var lblMiles: UILabel!
     @IBOutlet weak var btnIncreseMiles: UIButton!
     @IBOutlet weak var btnDecreseMiles: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -14,7 +14,6 @@ import Firebase
 class ViewPreferencesDetailVC: BaseViewController {
 
     @IBOutlet weak var imgrestaurant: UIImageView!
-    
     @IBOutlet weak var Name: UILabel!
     @IBOutlet weak var Address: UILabel!
     @IBOutlet weak var Price: UIButton!
@@ -30,9 +29,9 @@ class ViewPreferencesDetailVC: BaseViewController {
         print(resultDictGenerated)
         Name.text = resultDictGenerated["Name"] as? String
         Address.text = resultDictGenerated["Address"] as? String
-       // Price.setTitle(resultDictGenerated["Price"] as? String, for: .normal)
-//        Cuisine.text = "Italian"
-//        Date.text = "April 13"
+        // Price.setTitle(resultDictGenerated["Price"] as? String, for: .normal)
+        //        Cuisine.text = "Italian"
+        //        Date.text = "April 13"
         
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
@@ -45,18 +44,17 @@ class ViewPreferencesDetailVC: BaseViewController {
         setupnavigation()
         SetImageCornerRadius(imgrestaurant, radius: 20.0)
     }
+    
     @IBAction func btnVetoClick(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-
     }
     
-    func setupnavigation()
-    {
+    func setupnavigation() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(named: "Background Color")
+        self.navigationController?.navigationBar.isTranslucent = false
         SetNavigationTitle(Navname: "OURO")
 //           setLeftMenubtn(img: "Menu Icon")
         setLeftClose(img: "Back Chevron")
-        
-
         setRightMenubtn(img: "Check In")
     }
 }

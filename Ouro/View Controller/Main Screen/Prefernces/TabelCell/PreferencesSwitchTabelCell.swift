@@ -19,7 +19,7 @@ class PreferencesSwitchTabelCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         preferncesswitch.layer.masksToBounds = true
-         preferncesswitch.layer.cornerRadius = 15
+        preferncesswitch.layer.cornerRadius = 15
         preferncesswitch.layer.borderColor = UIColor.gray.cgColor // <-- we'll add the gray color
         preferncesswitch.layer.borderWidth = 1.0 // controll the w
     }

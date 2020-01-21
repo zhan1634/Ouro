@@ -34,6 +34,7 @@ class GenerateExperianceVC: UIViewController {
             self.runResult()
         })
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         if isFromView {
             print("generate experiance view will appear")
@@ -45,6 +46,7 @@ class GenerateExperianceVC: UIViewController {
             
         }
     }
+    
     func runSearch() {
         let center = setLocation
         var radius = UserDefaults.standard.double(forKey: "SearchDistance")

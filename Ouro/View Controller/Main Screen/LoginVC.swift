@@ -81,6 +81,7 @@ class LoginVC: BaseViewController {
                             let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                             navigationController.navigationBar.isHidden = true
                             navigationController.modalPresentationStyle = .fullScreen
+//                            self.navigationController?.pushViewController(navigationController, animated: true)
                             self.present(navigationController, animated: true, completion: nil)
                         }
                     }
@@ -125,6 +126,7 @@ class LoginVC: BaseViewController {
                         let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                         navigationController.navigationBar.isHidden = true
                         navigationController.modalPresentationStyle = .fullScreen
+//                        self.navigationController?.pushViewController(navigationController, animated: true)
                         self.present(navigationController, animated: true, completion: nil)
                         }
                     }

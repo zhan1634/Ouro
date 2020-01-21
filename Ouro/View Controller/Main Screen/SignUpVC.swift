@@ -28,7 +28,7 @@ class SignUpVC: BaseViewController {
         super.viewDidLoad()
          SetUptextField()
          SetUptext(lblSignup: lblSignIn, String1: "Already have an Account?", String2: "Sign In")
-        SetGoBack(img: "Back Chevron")
+         SetGoBack(img: "Back Chevron")
     }
     
     func SetUptextField()
@@ -68,6 +68,7 @@ class SignUpVC: BaseViewController {
                     let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                     navigationController.navigationBar.isHidden = true
                     navigationController.modalPresentationStyle = .fullScreen
+//                    self.navigationController?.pushViewController(navigationController, animated: true)
                     self.present(navigationController, animated: true, completion: nil)
                 }
             }

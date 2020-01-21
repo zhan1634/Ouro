@@ -125,7 +125,14 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
 //        chooseExperianceNav.view.frame = self.view.frame
 ////        self.view.addSubview(chooseExperianceNav.view)
 //        chooseExperianceNav.didMove(toParent: self)
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: {
+            let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
+            let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
+            navigationController.navigationBar.isHidden = true
+            navigationController.modalPresentationStyle = .fullScreen
+//                            self.navigationController?.pushViewController(navigationController, animated: true)
+            self.present(navigationController, animated: true, completion: nil)
+        })
     }
     
     @IBAction func btnGenerate(_ sender: Any) {
@@ -144,14 +151,13 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.startUpdatingLocation()
-
         }
     }
 
     @IBAction func btnpreferences(_ sender: Any) {
         let Preferencesnav = PreferencesVC.instantiate(fromAppStoryboard: .Main)
-         let navigationController = UINavigationController(rootViewController: Preferencesnav)
-         navigationController.navigationBar.isHidden = true
+        let navigationController = UINavigationController(rootViewController: Preferencesnav)
+        navigationController.navigationBar.isHidden = true
         navigationController.modalPresentationStyle = .fullScreen
         self.present(navigationController, animated: true, completion: nil)
     }
