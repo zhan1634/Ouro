@@ -103,6 +103,12 @@
                                             <action selector="btnChooseexperiance:" destination="BYZ-38-t0r" eventType="touchUpInside" id="36e-Lz-15g"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccu-sY-OKc">
+                                        <rect key="frame" x="207" y="496" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -121,12 +127,14 @@
                                     <constraint firstAttribute="trailing" secondItem="401-Od-JrX" secondAttribute="trailing" id="TtY-Ls-31T"/>
                                     <constraint firstItem="1Zv-ia-C7l" firstAttribute="width" secondItem="401-Od-JrX" secondAttribute="width" multiplier="0.3" id="WQk-IW-qco"/>
                                     <constraint firstItem="1Zv-ia-C7l" firstAttribute="centerX" secondItem="O7z-iP-IuA" secondAttribute="centerX" id="aGd-kK-fHG"/>
+                                    <constraint firstItem="ccu-sY-OKc" firstAttribute="top" secondItem="1Zv-ia-C7l" secondAttribute="bottom" constant="80" id="bFo-8C-Cw0"/>
                                     <constraint firstItem="yy1-nK-zt5" firstAttribute="width" secondItem="401-Od-JrX" secondAttribute="width" multiplier="0.3" id="bzf-BI-Sxd"/>
                                     <constraint firstItem="glh-Ee-sw5" firstAttribute="centerX" secondItem="Uyg-aJ-wA0" secondAttribute="centerX" id="cDc-QS-bZN"/>
                                     <constraint firstItem="401-Od-JrX" firstAttribute="top" secondItem="O7z-iP-IuA" secondAttribute="top" id="eae-t4-ikD"/>
                                     <constraint firstItem="Uyg-aJ-wA0" firstAttribute="width" secondItem="401-Od-JrX" secondAttribute="width" multiplier="0.3" id="hXC-8G-Bbl"/>
                                     <constraint firstItem="kTN-zm-acl" firstAttribute="width" secondItem="401-Od-JrX" secondAttribute="width" multiplier="0.3" id="iOx-Kf-IHg"/>
                                     <constraint firstItem="Uyg-aJ-wA0" firstAttribute="centerX" secondItem="O7z-iP-IuA" secondAttribute="centerX" id="jg0-hz-JeQ"/>
+                                    <constraint firstItem="ccu-sY-OKc" firstAttribute="centerX" secondItem="401-Od-JrX" secondAttribute="centerX" id="nQ5-nA-m6K"/>
                                     <constraint firstAttribute="trailing" secondItem="yy1-nK-zt5" secondAttribute="trailing" constant="40" id="rkJ-PT-73e"/>
                                 </constraints>
                             </view>
@@ -141,6 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="OURO" id="FqO-zy-S88"/>
+                    <connections>
+                        <outlet property="btnLogIn" destination="kTN-zm-acl" id="NhT-bY-ti6"/>
+                        <outlet property="btnSignUp" destination="yy1-nK-zt5" id="G3U-ZL-hgM"/>
+                        <outlet property="lblWelcome" destination="ccu-sY-OKc" id="E4y-Xc-P1x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -813,7 +826,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patria Bar &amp; Grill" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAP-2U-PmR">
-                                                <rect key="frame" x="25" y="70" width="325" height="32.666666666666657"/>
+                                                <rect key="frame" x="25" y="158.66666666666666" width="325" height="32.666666666666657"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="PAP-2U-PmR" secondAttribute="height" multiplier="1:0.1" id="LdN-Vf-RDH"/>
                                                 </constraints>
@@ -822,13 +835,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4110 Younge Street, Toronto, Caneda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwc-lV-J13">
-                                                <rect key="frame" x="25" y="102.66666666666667" width="325" height="14.333333333333329"/>
+                                                <rect key="frame" x="25" y="191.33333333333334" width="325" height="14.333333333333343"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWx-tw-ntc">
-                                                <rect key="frame" x="25.000000000000007" y="116.99999999999999" width="93.666666666666686" height="37.333333333333329"/>
+                                                <rect key="frame" x="25.000000000000007" y="205.66666666666666" width="93.666666666666686" height="37.333333333333343"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="$">
@@ -836,7 +849,7 @@
                                                 </state>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4X-Rp-Jpx">
-                                                <rect key="frame" x="128" y="116.99999999999999" width="119" height="37.333333333333329"/>
+                                                <rect key="frame" x="128" y="205.66666666666666" width="119" height="37.333333333333343"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="April 13th">
@@ -844,7 +857,7 @@
                                                 </state>
                                             </button>
                                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwq-AB-uwI">
-                                                <rect key="frame" x="256.33333333333331" y="116.99999999999999" width="93.666666666666686" height="37.333333333333329"/>
+                                                <rect key="frame" x="256.33333333333331" y="205.66666666666666" width="93.666666666666686" height="37.333333333333343"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                 <state key="normal" title="Italian">
@@ -852,7 +865,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFa-IX-0Ay" customClass="ButtonView" customModule="Ouro" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="197" width="100" height="60"/>
+                                                <rect key="frame" x="25" y="285.66666666666669" width="100" height="60"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <state key="normal" image="Call"/>
                                                 <userDefinedRuntimeAttributes>
@@ -862,7 +875,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ws4-Vx-2yL" customClass="ButtonView" customModule="Ouro" customModuleProvider="target">
-                                                <rect key="frame" x="137.66666666666666" y="197" width="100" height="60"/>
+                                                <rect key="frame" x="137.66666666666666" y="285.66666666666669" width="100" height="60"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <state key="normal" image="Hours"/>
                                                 <userDefinedRuntimeAttributes>
@@ -872,7 +885,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Q-fA-WCy" customClass="ButtonView" customModule="Ouro" customModuleProvider="target">
-                                                <rect key="frame" x="250" y="197" width="100" height="60"/>
+                                                <rect key="frame" x="250" y="285.66666666666669" width="100" height="60"/>
                                                 <color key="backgroundColor" name="Button Color"/>
                                                 <state key="normal" image="Location"/>
                                                 <userDefinedRuntimeAttributes>
@@ -882,14 +895,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bw-v5-gVu">
-                                                <rect key="frame" x="62.666666666666657" y="317" width="249.99999999999997" height="60"/>
+                                                <rect key="frame" x="62.666666666666657" y="405.66666666666669" width="249.99999999999997" height="60"/>
                                                 <state key="normal" image="Veto"/>
                                                 <connections>
                                                     <action selector="btnVetoClick:" destination="Bwq-h1-NXS" eventType="touchUpInside" id="EJv-Ju-fay"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ouro Will automatically check you in 200 meters from destination" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUY-2P-gwY">
-                                                <rect key="frame" x="62.666666666666657" y="392" width="249.99999999999997" height="50"/>
+                                                <rect key="frame" x="62.666666666666657" y="480.66666666666669" width="249.99999999999997" height="50.000000000000057"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="pUY-2P-gwY" secondAttribute="height" multiplier="5:1" id="rv0-Gj-WZG"/>
                                                 </constraints>
@@ -910,6 +923,7 @@
                                             <constraint firstItem="pUY-2P-gwY" firstAttribute="width" secondItem="Ipk-Aj-TVm" secondAttribute="width" multiplier="0.8" constant="-50" id="IMS-jE-Gzf"/>
                                             <constraint firstItem="eFa-IX-0Ay" firstAttribute="leading" secondItem="Ipk-Aj-TVm" secondAttribute="leading" constant="25" id="JGw-jC-bWx"/>
                                             <constraint firstItem="pUY-2P-gwY" firstAttribute="top" secondItem="1Bw-v5-gVu" secondAttribute="bottom" constant="15" id="NHV-Sf-ym7"/>
+                                            <constraint firstItem="PAP-2U-PmR" firstAttribute="centerY" secondItem="Ipk-Aj-TVm" secondAttribute="centerY" constant="-200" id="Nul-nO-XcR"/>
                                             <constraint firstItem="eFa-IX-0Ay" firstAttribute="width" secondItem="Ipk-Aj-TVm" secondAttribute="width" multiplier="0.4" constant="-50" id="O5s-7A-SWR"/>
                                             <constraint firstItem="Uwc-lV-J13" firstAttribute="centerX" secondItem="Ipk-Aj-TVm" secondAttribute="centerX" id="OnX-6a-2lm"/>
                                             <constraint firstAttribute="trailing" secondItem="Y9Q-fA-WCy" secondAttribute="trailing" constant="25" id="Pwt-AV-XGc"/>
@@ -933,7 +947,6 @@
                                             <constraint firstItem="PAP-2U-PmR" firstAttribute="width" secondItem="Ipk-Aj-TVm" secondAttribute="width" constant="-50" id="ikp-3R-62K"/>
                                             <constraint firstItem="TWx-tw-ntc" firstAttribute="top" secondItem="Uwc-lV-J13" secondAttribute="bottom" id="kU5-cY-63d"/>
                                             <constraint firstItem="TWx-tw-ntc" firstAttribute="leading" secondItem="Ipk-Aj-TVm" secondAttribute="leading" constant="25" id="nyR-wc-lSr"/>
-                                            <constraint firstItem="PAP-2U-PmR" firstAttribute="top" secondItem="Ipk-Aj-TVm" secondAttribute="top" constant="70" id="o9k-sh-PbN"/>
                                             <constraint firstItem="TWx-tw-ntc" firstAttribute="height" secondItem="Ipk-Aj-TVm" secondAttribute="height" multiplier="0.05" id="ocE-nX-WmQ"/>
                                             <constraint firstItem="1Bw-v5-gVu" firstAttribute="centerX" secondItem="Ipk-Aj-TVm" secondAttribute="centerX" id="pAO-Ht-alX"/>
                                             <constraint firstItem="Y9Q-fA-WCy" firstAttribute="height" secondItem="eFa-IX-0Ay" secondAttribute="height" id="qkr-Ls-2NI"/>

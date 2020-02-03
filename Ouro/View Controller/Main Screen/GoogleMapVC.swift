@@ -39,6 +39,8 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
     var searchLong = Double()
     var setLocationPreferences = CLLocation()
     var isFromGenerated : Bool = false
+    var users = [String]()
+    var geoFire = GeoFire(firebaseRef: Database.database().reference().child("Locations"))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,16 +138,37 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
     }
     
     @IBAction func btnGenerate(_ sender: Any) {
-        isFromGenerated = true
-        let generateexpNav = GenerateExperianceVC.instantiate(fromAppStoryboard: .Main)
-        print(setLocationPreferences)
-        generateexpNav.setLocation = self.setLocationPreferences
-        self.addChild(generateexpNav)
-        generateexpNav.view.frame = self.view.frame
-        self.view.addSubview(generateexpNav.view)
-        generateexpNav.didMove(toParent: self)
+//        DispatchQueue.main.async {
+//            let center = self.setLocationPreferences
+//            var radius = UserDefaults.standard.double(forKey: "SearchDistance")
+//            if radius <= 0 {
+//                radius = 5
+//            }//38 Dan Leckie Way Toronto
+//            let circleQuery = self.geoFire.query(at: center, withRadius: radius)
+//            let queryHandle = circleQuery.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+//                self.users.append(key)
+//                print("Users :",self.users)
+//            })
+//        }
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            if self.users.count == 0 {
+                let alert = UIAlertController(title: "", message: "No Results Found - Please update your selection and try again", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            } else {
+                self.isFromGenerated = true
+                let generateexpNav = GenerateExperianceVC.instantiate(fromAppStoryboard: .Main)
+                print(self.setLocationPreferences)
+                generateexpNav.setLocation = self.setLocationPreferences
+                self.addChild(generateexpNav)
+                generateexpNav.view.frame = self.view.frame
+                self.view.addSubview(generateexpNav.view)
+                generateexpNav.didMove(toParent: self)
+            }
+        }
     }
+    
     @IBAction func btnLocationClick(_ sender: UIButton)  {
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
@@ -204,6 +227,17 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
                                                       longitude: searchLong,
                                                       zoom: zoomLevel)
                 self.mapView.animate(to: camera)
+                
+                let center = self.setLocationPreferences
+                var radius = UserDefaults.standard.double(forKey: "SearchDistance")
+                if radius <= 0 {
+                    radius = 5
+                }//38 Dan Leckie Way Toronto
+                let circleQuery = self.geoFire.query(at: center, withRadius: radius)
+                let queryHandle = circleQuery.observe(.keyEntered, with: { (key: String!, location: CLLocation!) in
+                    self.users.append(key)
+                    print("Users :",self.users)
+                })
             } else {
             }
         }

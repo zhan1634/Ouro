@@ -88,6 +88,7 @@ class BaseViewController: UIViewController {
         RightBarBackItem.tintColor = UIColor.white
         self.navigationItem.rightBarButtonItem = RightBarBackItem
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         print("base view view will appear")
         if isFromRestaurantFoodOrderVC {

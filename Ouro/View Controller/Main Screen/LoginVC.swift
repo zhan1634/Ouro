@@ -25,7 +25,7 @@ class LoginVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SetUptext(lblSignup: lblSignUp, String1: "Don't have an account?", String2: "Sign Up")
+        SetUptext(lblSignup: lblSignUp, String1: "Don't have an account?", String2: " Sign Up")
         SetUptextField()
         setupnavigation()
     }
@@ -75,8 +75,11 @@ class LoginVC: BaseViewController {
                         CurrentUser.sharedInstance.generalDetails = UserDetail(fname: fname, lname: lname, mobileno: mobileno, email: Email, password: password)
                         if let data = try? JSONEncoder().encode(CurrentUser.sharedInstance.generalDetails) {
                             UserDefaults.standard.set(data, forKey: "Userdata")
+                            UserDefaults.standard.set("\(fname ?? "")", forKey: "FirstName")
+                            let fname1 = UserDefaults.standard.string(forKey: "FirstName")
+                            print(fname1 as Any)
                             print(data)
-                             self.removeSpinner()
+                            self.removeSpinner()
                             let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
                             let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
                             navigationController.navigationBar.isHidden = true

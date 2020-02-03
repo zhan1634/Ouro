@@ -10,9 +10,25 @@ import UIKit
 
 class MainVC: BaseViewController {
     
+    @IBOutlet weak var btnLogIn: ButtonView!
+    @IBOutlet weak var btnSignUp: ButtonView!
+    @IBOutlet weak var lblWelcome: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        changeController()
+        let fname1 = UserDefaults.standard.string(forKey: "FirstName")
+        print(fname1 as Any)
+        lblWelcome.text = "Welcome \(fname1 ?? "")"
+        if UserDefaults.standard.data(forKey: "Userdata") != nil {
+            btnLogIn.isHidden = true
+            btnSignUp.isHidden = true
+            lblWelcome.isHidden = false
+        } else {
+            btnLogIn.isHidden = false
+            btnSignUp.isHidden = false
+            lblWelcome.isHidden = true
+        }
+//        changeController()
         setupnavigation()
     }
     
@@ -34,7 +50,8 @@ class MainVC: BaseViewController {
 //        SetNavigationTitle(Navname: "OURO")
         //setLeftMenubtn(img: "Menu Icon")
 //        setRightMenubtn(img: "Check In")
-        self.navigationController?.navigationBar.barTintColor = .black
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(named: "Background Color")
+        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationItem.title = "OURO"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }

@@ -34,8 +34,8 @@ class ChooseExperianceVC: BaseViewController {
 //            navigationController.modalPresentationStyle = .fullScreen
 ////                            self.navigationController?.pushViewController(navigationController, animated: true)
 //            self.present(navigationController, animated: true, completion: nil)
-        UserDefaults.standard.synchronize()
-        UserDefaults.standard.removeObject(forKey: "Userdata")
+//        UserDefaults.standard.synchronize()
+//        UserDefaults.standard.removeObject(forKey: "Userdata")
         let mainVC = MainVC.instantiate(fromAppStoryboard: .Main)
         let navigationController = UINavigationController(rootViewController: mainVC)
 //        navigationController.navigationBar.isHidden = false

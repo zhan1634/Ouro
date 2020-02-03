@@ -55,6 +55,10 @@ class ViewPreferencesDetailVC: BaseViewController {
         SetNavigationTitle(Navname: "OURO")
 //           setLeftMenubtn(img: "Menu Icon")
         setLeftClose(img: "Back Chevron")
-        setRightMenubtn(img: "Check In")
+        
+        if (UserDefaults.standard.data(forKey: "Userdata") as? Data) != nil {
+            setRightMenubtn(img: "Check In")
+        }
+        
     }
 }

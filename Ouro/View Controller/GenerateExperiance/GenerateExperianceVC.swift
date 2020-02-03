@@ -26,6 +26,8 @@ class GenerateExperianceVC: UIViewController {
     var setLocation = CLLocation()
     var tempC = Int()
     var isFromView : Bool = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -66,6 +68,11 @@ class GenerateExperianceVC: UIViewController {
                 //self.runResult()
             })
         })
+//        if users.count == 0 {
+//            let alert = UIAlertController(title: "", message: "No Results Found - Please update your selection and try again", preferredStyle: UIAlertController.Style.alert)
+//            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
     }
     
     

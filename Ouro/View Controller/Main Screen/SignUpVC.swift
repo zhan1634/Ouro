@@ -27,12 +27,11 @@ class SignUpVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          SetUptextField()
-         SetUptext(lblSignup: lblSignIn, String1: "Already have an Account?", String2: "Sign In")
+         SetUptext(lblSignup: lblSignIn, String1: "Already have an Account?", String2: " Sign In")
          SetGoBack(img: "Back Chevron")
     }
     
-    func SetUptextField()
-    {
+    func SetUptextField() {
         setTextfieldAsSelected(txtName, strText: "Your Name")
         setTextfieldAsSelected(txtLastName, strText: "Last Name")
         setTextfieldAsSelected(txtMobileNo, strText: "Mobile Number")
