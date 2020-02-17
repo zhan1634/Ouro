@@ -113,7 +113,7 @@ class RestaurantFoodOrderVC: BaseViewController,UITableViewDelegate,UITableViewD
             else {
                 cell.lblUserName.text = "Guest"
             }
-            cell.lblCheckIn.text = "\(arrpending.count == 0 ? 0 : arrpending.count)" + " Check - in"
+            cell.lblCheckIn.text = "\(arrpending.count == 0 ? 0 : arrpending.count)" + " Ouro Searches"
             cell.segmentedControl.selectedSegmentIndex = segment
             cell.segmentedControl.addTarget(self, action: #selector(self.handleSegmentControlClick(_:)), for: .valueChanged)
             cell.btnBack.addTarget(self, action: #selector(btnBackAction), for: .touchUpInside)

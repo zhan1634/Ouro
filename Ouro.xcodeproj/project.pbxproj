@@ -53,6 +53,7 @@
 		4F94C584237298AB00DE98B6 /* labelview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C579237298AB00DE98B6 /* labelview.swift */; };
 		4F94C586237298F700DE98B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C585237298F700DE98B6 /* SceneDelegate.swift */; };
 		4F94C58B2372C94D00DE98B6 /* UserLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F94C58A2372C94D00DE98B6 /* UserLocationVC.swift */; };
+		4FD91ED223F5075F00C51CCD /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD91ED123F5075F00C51CCD /* AlertViewController.swift */; };
 		4FF7558C23756AA5001CBE07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FF7558B23756AA5001CBE07 /* GoogleService-Info.plist */; };
 		4FF7558F237574D0001CBE07 /* Generatedexp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF7558E237574D0001CBE07 /* Generatedexp.swift */; };
 		50FD1DC4E1712B4B10D35BE3 /* Pods_Ouro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EC7627E0FB7B9439A162D0 /* Pods_Ouro.framework */; };
@@ -143,6 +144,7 @@
 		4F94C585237298F700DE98B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		4F94C58A2372C94D00DE98B6 /* UserLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationVC.swift; sourceTree = "<group>"; };
 		4FBBDDAE1B6EF7B4C1B002F5 /* Pods_OuroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OuroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD91ED123F5075F00C51CCD /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		4FF7558B23756AA5001CBE07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4FF7558E237574D0001CBE07 /* Generatedexp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generatedexp.swift; sourceTree = "<group>"; };
 		5CE989D566416A469676E3F8 /* Pods_OuroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OuroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -397,6 +399,7 @@
 				4F94C577237298AB00DE98B6 /* GradientView.swift */,
 				4F94C578237298AB00DE98B6 /* ButtonView.swift */,
 				4F94C579237298AB00DE98B6 /* labelview.swift */,
+				4FD91ED123F5075F00C51CCD /* AlertViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -697,6 +700,7 @@
 				4F94C5372372972600DE98B6 /* GFGeoHashQuery.m in Sources */,
 				4F94C57F237298AB00DE98B6 /* AppConstant.swift in Sources */,
 				4F94C5642372989500DE98B6 /* SignUpVC.swift in Sources */,
+				4FD91ED223F5075F00C51CCD /* AlertViewController.swift in Sources */,
 				4F94C586237298F700DE98B6 /* SceneDelegate.swift in Sources */,
 				4F94C56B2372989500DE98B6 /* UserModel.swift in Sources */,
 				4F94C57C237298AB00DE98B6 /* myView.swift in Sources */,

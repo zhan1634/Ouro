@@ -153,9 +153,23 @@ class GoogleMapVC: BaseViewController,CLLocationManagerDelegate,UISearchBarDeleg
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if self.users.count == 0 {
-                let alert = UIAlertController(title: "", message: "No Results Found - Please update your selection and try again", preferredStyle: UIAlertController.Style.alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+                // https://www.swiftdevcenter.com/change-font-text-color-and-background-color-of-uialertcontroller/
+                
+                let alertController = UIAlertController(title: "", message: "No Results Found - Please update your selection and try again", preferredStyle: .alert)
+                
+                // Change font and color of title
+                alertController.setTitlet(font: UIFont.boldSystemFont(ofSize: 26), color: UIColor.white)
+                
+                // Change font and color of message
+                alertController.setMessage(font: UIFont.boldSystemFont(ofSize: 15), color: UIColor.white)
+                
+                // Change background color of UIAlertController
+                alertController.setBackgroundColor(color: UIColor.black)
+                
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertController.addAction(action)
+                alertController.setTint(color: .white)
+                self.present(alertController, animated: true, completion: nil)
             } else {
                 self.isFromGenerated = true
                 let generateexpNav = GenerateExperianceVC.instantiate(fromAppStoryboard: .Main)

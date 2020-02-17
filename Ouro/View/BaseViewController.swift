@@ -67,8 +67,7 @@ class BaseViewController: UIViewController {
     //           }
         }
     
-    @objc func btnBackClicked()
-    {
+    @objc func btnBackClicked() {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -86,6 +85,14 @@ class BaseViewController: UIViewController {
         var RightBarBackItem = UIBarButtonItem()
         RightBarBackItem = UIBarButtonItem(image:#imageLiteral(resourceName: img), style: UIBarButtonItem.Style.plain, target: self,  action: #selector(setRightMenuClick))
         RightBarBackItem.tintColor = UIColor.white
+        self.navigationItem.rightBarButtonItem = RightBarBackItem
+    }
+    
+    //MARK: Set the navigation right menu item
+    func  removeRightMenubtn(img:String){
+        var RightBarBackItem = UIBarButtonItem()
+        RightBarBackItem = UIBarButtonItem(image:#imageLiteral(resourceName: img), style: UIBarButtonItem.Style.plain, target: self,  action: nil)
+        RightBarBackItem.tintColor = UIColor.clear
         self.navigationItem.rightBarButtonItem = RightBarBackItem
     }
     

@@ -102,6 +102,7 @@ class LoginVC: BaseViewController {
         self.showSpinner(onView: self.view)
         let loginManager = LoginManager()
         loginManager.logOut()
+
         loginManager.logIn(permissions: ["public_profile", "email"], viewController: self) { (loginResult) in
             switch loginResult {
             case .failed(let error):
@@ -125,16 +126,71 @@ class LoginVC: BaseViewController {
                       }else{
                         print("authresult -- ",authResult)
                         self.removeSpinner()
-                        let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
-                        let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
-                        navigationController.navigationBar.isHidden = true
-                        navigationController.modalPresentationStyle = .fullScreen
-//                        self.navigationController?.pushViewController(navigationController, animated: true)
-                        self.present(navigationController, animated: true, completion: nil)
+                        
+                        UserDefaults.standard.set(authResult?.user.uid, forKey: "UserID")
+                        self.ref = Database.database().reference()
+                        
+                        if let result = data as? [String:String] {
+                            let email = result["email"]
+                            let name = result["name"]
+                            print("\(email)   \(name)")
+                            CurrentUser.sharedInstance.generalDetails = UserDetail(fname: name ?? "", lname: "", mobileno: "", email: email ?? "", password: "")
+                            if let data = try? JSONEncoder().encode(CurrentUser.sharedInstance.generalDetails) {
+                                UserDefaults.standard.set(data, forKey: "Userdata")
+                                UserDefaults.standard.set("\(name ?? "")", forKey: "FirstName")
+                                let fname1 = UserDefaults.standard.string(forKey: "FirstName")
+                                print(fname1 as Any)
+                                print(data)
+                                self.removeSpinner()
+                                let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
+                                let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
+                                navigationController.navigationBar.isHidden = true
+                                navigationController.modalPresentationStyle = .fullScreen
+    //                            self.navigationController?.pushViewController(navigationController, animated: true)
+                                self.present(navigationController, animated: true, completion: nil)
                         }
-                    }
-                }
+                        
+//                      self.ref.child("Users").child((authResult?.user.uid)!).observe(DataEventType.value, with: { (snapshot) in
+//                        print("SNAPSHOT: \(snapshot)")
+//                        if let userDict = data snapshot.value as? [String : AnyObject] {
+//                            let fname = userDict["FirstName"] as? String
+//                            let lname = userDict["LastName"] as? String
+//                            let mobileno = userDict["MobileNo"] as? String
+//                            let Email = userDict["EmailAddress"] as? String
+//                            let password = userDict["Password"] as? String
+//                        if let result = data
+//                            CurrentUser.sharedInstance.generalDetails = UserDetail(fname: fname, lname: lname, mobileno: mobileno, email: Email, password: password)
+//                            if let data = try? JSONEncoder().encode(CurrentUser.sharedInstance.generalDetails) {
+//                                UserDefaults.standard.set(data, forKey: "Userdata")
+//                                UserDefaults.standard.set("\(fname ?? "")", forKey: "FirstName")
+//                                let fname1 = UserDefaults.standard.string(forKey: "FirstName")
+//                                print(fname1 as Any)
+//                                print(data)
+//                                self.removeSpinner()
+//                                let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
+//                                let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
+//                                navigationController.navigationBar.isHidden = true
+//                                navigationController.modalPresentationStyle = .fullScreen
+//    //                            self.navigationController?.pushViewController(navigationController, animated: true)
+//                                self.present(navigationController, animated: true, completion: nil)
+//
+//
+//
+//
+////                        let ChooseExeperianceNav = ChooseExperianceVC.instantiate(fromAppStoryboard: .Main)
+////                        let navigationController = UINavigationController(rootViewController: ChooseExeperianceNav)
+////                        navigationController.navigationBar.isHidden = true
+////                        navigationController.modalPresentationStyle = .fullScreen
+////                        self.navigationController?.pushViewController(navigationController, animated: true)
+////                        self.present(navigationController, animated: true, completion: nil)
+//                        }
+//                    }
+//                })
             }
         }
     }
+}
+}
+}
+}
 }

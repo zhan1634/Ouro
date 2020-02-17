@@ -41,5 +41,4 @@ class TextFieldView: UITextField {
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-    
 }

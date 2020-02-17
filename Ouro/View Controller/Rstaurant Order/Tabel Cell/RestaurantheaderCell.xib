@@ -27,7 +27,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFd-TM-aBy">
-                                <rect key="frame" x="96.666666666666671" y="129" width="251.66666666666663" height="24"/>
+                                <rect key="frame" x="74.666666666666686" y="129" width="296" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -81,7 +81,7 @@
                             <constraint firstItem="TdU-EB-gMu" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.2" id="dwy-h9-5fM"/>
                             <constraint firstItem="rFd-TM-aBy" firstAttribute="top" secondItem="TdU-EB-gMu" secondAttribute="bottom" constant="15" id="hqo-tC-IMh"/>
                             <constraint firstItem="ysq-VS-Bjk" firstAttribute="top" secondItem="rFd-TM-aBy" secondAttribute="bottom" id="jms-0h-lnK"/>
-                            <constraint firstItem="rFd-TM-aBy" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.7" constant="-60" id="zm9-BZ-XDe"/>
+                            <constraint firstItem="rFd-TM-aBy" firstAttribute="width" secondItem="Oc5-gp-MOs" secondAttribute="width" multiplier="0.8" constant="-60" id="zm9-BZ-XDe"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -13,6 +13,7 @@ class MainVC: BaseViewController {
     @IBOutlet weak var btnLogIn: ButtonView!
     @IBOutlet weak var btnSignUp: ButtonView!
     @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var btnLogOut: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +24,17 @@ class MainVC: BaseViewController {
             btnLogIn.isHidden = true
             btnSignUp.isHidden = true
             lblWelcome.isHidden = false
+            btnLogOut.isHidden = false
+            setRightMenubtn(img: "Check In")
         } else {
             btnLogIn.isHidden = false
             btnSignUp.isHidden = false
             lblWelcome.isHidden = true
+            btnLogOut.isHidden = true
+            removeRightMenubtn(img: "Check In")
+//            self.navigationController?.navigationItem.rightBarButtonItem = nil
         }
+        
 //        changeController()
         setupnavigation()
     }
@@ -54,6 +61,21 @@ class MainVC: BaseViewController {
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationItem.title = "OURO"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    }
+    
+    @IBAction func btnLogOut(_ sender: Any) {
+        UserDefaults.standard.synchronize()
+        UserDefaults.standard.removeObject(forKey: "Userdata")
+        UserDefaults.standard.removeObject(forKey: "FirstName")
+        UserDefaults.standard.removeObject(forKey: "SearchDistance")
+        UserDefaults.standard.removeObject(forKey: "PreferencesData")
+        UserDefaults.standard.removeObject(forKey: "PricePreference")
+        
+        self.btnLogOut.isHidden = true
+        self.lblWelcome.isHidden = true
+        self.btnSignUp.isHidden = false
+        self.btnLogIn.isHidden = false
+        removeRightMenubtn(img: "Check In")
     }
     
     @IBAction func btnChooseexperiance(_ sender: Any) {
